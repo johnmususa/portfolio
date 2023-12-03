@@ -69,11 +69,11 @@ nav ul a{
     cursor: pointer;
 }
 nav ul .active{
-    background-color: rgb(6, 90, 6);
+    background-color: green;
     border-radius: 5px;
 }
 nav ul a:hover{
-    background-color: rgb(6, 90, 6);
+    background-color: green;
     color: white;
     border-radius: 5px;
 }
@@ -83,7 +83,7 @@ nav ul a:hover{
     border: none;
     padding: 7px 10px;
     cursor: pointer;
-    background-color:  rgb(6, 90, 6);
+    background-color: green;
     border-radius: 5px;
 }
 .header-btn a{
