@@ -393,6 +393,7 @@ header .logo-img:hover{
     cursor: pointer;
     border: none;
     border-radius: 30px;
+     box-shadow: 0 0 20px green;
     margin-left: 21rem;
     margin-bottom: 5rem;
 }
@@ -503,6 +504,7 @@ header .logo-img:hover{
     cursor: pointer;
     padding: 11px 30px;
     margin-bottom: 15px;
+     box-shadow: 0 0 5px lightgreen;
 }
 .card-btn a{
     color: white;
@@ -636,11 +638,13 @@ header .logo-img:hover{
     max-width: 128px;
     min-height: 125px;
     flex-grow: 1;
+    transition: .30s;
+    cursor: pointer;
     border: .1px solid grey;
 }
-.blog-card img:hover{
-    transform: scale(1.1);
-    cursor: pointer;
+.blog-card:hover > :not(:hover){
+    opacity: .4;
+    transform: scale(0.9);
 }
 /*///////my projects/////////////////*/
 #projects{
@@ -743,6 +747,113 @@ header .logo-img:hover{
     transition: .3s ease-in-out;
 }
 .pro-box-text a:active{
+    transform: translateY(1.1rem);
+}
+/*/////////project section2//////////*/
+#projects-2{
+    width: 100%;
+    padding: 30px 0;
+    background-color: #111;
+}
+#projects-2 h1{
+    color: white;
+    text-align: center;
+    font-size: 27px;
+    font-style: italic;
+    padding-top: 20px;
+    font-family: 'Rowdies', cursive;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 4.5rem;
+}
+.tab-3{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+    align-items: left;
+    margin-left: auto;
+    margin-right: auto; 
+    flex-grow: 1;
+}
+.tab-4{
+    width: 95%;
+    flex-grow: 1;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto; 
+    flex-grow: 1;
+}
+.pro-box-2{
+    width: 20%;
+    height: 100%;
+    padding: 15px 0;
+    background-color: #000;
+    margin-left: 6rem;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+.pro-box-2 img{
+    width: 100%;
+    height: 270px;
+}
+.pro-box-1 video{
+    flex-grow: 1;
+    width: 100%;
+    flex: 1;
+}
+.pro-box-text-2{
+    width: 100%;
+    margin-bottom: 13px;
+    text-align: center;
+}
+.pro-box-text-2 h2{
+    font-size: 18px;
+    letter-spacing: 2px;
+    padding-top: 13px;
+    color: white;
+    font-weight: 550;
+    margin-bottom: 1rem;
+}
+.pro-box-text-2 p{
+    max-width: 500;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: white;
+    font-weight: 300;
+    width: 87%;
+    margin: auto;
+    text-align: center;
+    line-height: 23px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+.pro-box-text-2 a{
+    width: 15rem;
+    margin-bottom: 1rem;
+    padding: 9px 30px;
+    outline: none;
+    border: none;
+    background-color: green;
+    border-radius: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    cursor: pointer;
+}
+.pro-box-text-2 a:hover{
+    background-color: transparent;
+    border: 1px solid white;
+    transition: .3s ease-in-out;
+}
+.pro-box-text-2 a:active{
     transform: translateY(1.1rem);
 }
 /*///////contact me section//////////*/
