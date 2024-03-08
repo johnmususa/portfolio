@@ -3210,6 +3210,35 @@ form .form-text{
         padding-top: 10px;
         padding-bottom: 30px;
     }
+    #projects-2 h1{
+        color: black;
+        text-align: center;
+        font-size: 25px;
+        padding-top: 20px;
+        font-family: 'Rowdies', cursive;
+        letter-spacing: 2px;
+        font-weight: 600;
+        margin-bottom: 4rem;
+    }
+    .pro-box-text-2 h2{
+        font-size: 20px;
+        letter-spacing: 3px;
+        padding-top: 13px;
+        color: white;
+        font-weight: 420;
+        margin-bottom: 1rem;
+    }
+    .pro-box-text-2 p{
+        max-width: 600;
+        font-size: 12px;
+        color: white;
+        font-weight: 300;
+        width: 84%;
+        margin: auto;
+        line-height: 23px;
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
     .sub-contact{
         display: flex;
         padding: 10px 0;
@@ -3669,6 +3698,40 @@ form .form-text{
         font-weight: 200;
         cursor: pointer;
     }
+    .tab-3,.tab-4{
+        margin-bottom: 20px;
+    }
+    .pro-box-2{
+        flex-grow: 1;
+        overflow: hidden;
+    }
+    .pro-box-text-2{
+        margin-bottom: 10px;
+    }
+    .pro-box-text-2 h2{
+        font-size: 18px;
+        letter-spacing: 3px;
+        padding-top: 8px;
+        font-weight: 600;
+        margin-bottom: 12px;
+    }
+    .pro-box-text-2 p{
+        max-width: 600;
+        font-size: 12px;
+        line-height: 21px;
+        font-weight: 300;
+        width: 83%;
+        margin: auto;
+        padding-bottom: 28px;
+    }
+    .pro-box-text-2 a{
+        width: 10rem;
+        margin-bottom: 1rem;
+        padding: 7px 28px;
+        font-size: 11px;
+        font-weight: 200;
+        cursor: pointer;
+    }
     .sub-contact{
         display: flex;
         padding: 10px 0;
@@ -4114,6 +4177,39 @@ form .form-text{
         font-weight: 200;
         cursor: pointer;
     }
+    .tab-3,.tab-4{
+        margin-bottom: 20px;
+    }
+    .pro-box-2{
+        flex-grow: 1;
+        overflow: hidden;
+    }
+    .pro-box-text-2{
+        margin-bottom: 10px;
+    }
+    .pro-box-text-2 h2{
+        font-size: 19px;
+        letter-spacing: 1px;
+        padding-top: 8px;
+        font-weight: 600;
+        margin-bottom: 12px;
+    }
+    .pro-box-text-2 p{
+        max-width: 600;
+        font-size: 12px;
+        font-weight: 300;
+        width: 83%;
+        margin: auto;
+        padding-bottom: 28px;
+    }
+    .pro-box-text-2 a{
+        width: 10rem;
+        margin-bottom: 1rem;
+        padding: 7px 28px;
+        font-size: 11px;
+        font-weight: 200;
+        cursor: pointer;
+    }
     .sub-contact{
         display: flex;
         padding: 10px 0;
@@ -4552,6 +4648,39 @@ form .form-text{
         padding-bottom: 28px;
     }
     .pro-box-text a{
+        width: 10rem;
+        margin-bottom: 1rem;
+        padding: 7px 28px;
+        font-size: 11px;
+        font-weight: 200;
+        cursor: pointer;
+    }
+    .tab-3,.tab-4{
+        margin-bottom: 20px;
+    }
+    .pro-box-2{
+        flex-grow: 1;
+        overflow: hidden;
+    }
+    .pro-box-text-2{
+        margin-bottom: 10px;
+    }
+    .pro-box-text-2 h2{
+        font-size: 19px;
+        letter-spacing: 1px;
+        padding-top: 8px;
+        font-weight: 600;
+        margin-bottom: 12px;
+    }
+    .pro-box-text-2 p{
+        max-width: 600;
+        font-size: 12px;
+        font-weight: 300;
+        width: 83%;
+        margin: auto;
+        padding-bottom: 28px;
+    }
+    .pro-box-text-2 a{
         width: 10rem;
         margin-bottom: 1rem;
         padding: 7px 28px;
@@ -5057,6 +5186,39 @@ form .form-text{
         font-weight: 200;
         cursor: pointer;
     }
+    .tab-3,.tab-4{
+        margin-bottom: 20px;
+    }
+    .pro-box-2{
+        flex-grow: 1;
+        overflow: hidden;
+    }
+    .pro-box-text-2{
+        margin-bottom: 10px;
+    }
+    .pro-box-text-2 h2{
+        font-size: 17px;
+        letter-spacing: 1px;
+        padding-top: 8px;
+        font-weight: 420;
+        margin-bottom: 8px;
+    }
+    .pro-box-text-2 p{
+        max-width: 600;
+        font-size: 12px;
+        font-weight: 300;
+        width: 84%;
+        margin: auto;
+        padding-bottom: 28px;
+    }
+    .pro-box-text-2 a{
+        width: 12rem;
+        margin-bottom: 1rem;
+        padding: 7px 30px;
+        font-size: 11px;
+        font-weight: 200;
+        cursor: pointer;
+    }
     .sub-contact{
         display: flex;
         padding: 10px 0;
@@ -5555,6 +5717,39 @@ form .form-text{
         font-weight: 200;
         cursor: pointer;
     }
+    .tab-3,.tab-4{
+        margin-bottom: 20px;
+    }
+    .pro-box-2{
+        flex-grow: 1;
+        overflow: hidden;
+    }
+    .pro-box-text-2{
+        margin-bottom: 10px;
+    }
+    .pro-box-text-2 h2{
+        font-size: 17px;
+        letter-spacing: 1px;
+        padding-top: 8px;
+        font-weight: 420;
+        margin-bottom: 8px;
+    }
+    .pro-box-text-2 p{
+        max-width: 600;
+        font-size: 12px;
+        font-weight: 300;
+        width: 84%;
+        margin: auto;
+        padding-bottom: 28px;
+    }
+    .pro-box-text-2 a{
+        width: 12rem;
+        margin-bottom: 1rem;
+        padding: 7px 30px;
+        font-size: 11px;
+        font-weight: 200;
+        cursor: pointer;
+    }
     .sub-contact{
         display: flex;
         padding: 10px 0;
@@ -5996,6 +6191,40 @@ form .form-text{
         padding-bottom: 25px;
     }
     .pro-box-text a{
+        width: 10rem;
+        margin-bottom: 1rem;
+        padding: 7px 27px;
+        font-size: 11px;
+        font-weight: 200;
+        cursor: pointer;
+    }
+    .tab-3,.tab-4{
+        margin-bottom: 20px;
+    }
+    .pro-box-2{
+        flex-grow: 1;
+        overflow: hidden;
+    }
+    .pro-box-text-2{
+        margin-bottom: 10px;
+    }
+    .pro-box-text-2 h2{
+        font-size: 18px;
+        letter-spacing: 1px;
+        padding-top: 8px;
+        font-weight: 420;
+        margin-bottom: 12px;
+    }
+    .pro-box-text-2 p{
+        max-width: 600;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 18px;
+        width: 90%;
+        margin: auto;
+        padding-bottom: 25px;
+    }
+    .pro-box-text-2 a{
         width: 10rem;
         margin-bottom: 1rem;
         padding: 7px 27px;
@@ -6477,6 +6706,40 @@ form .form-text{
         padding-bottom: 25px;
     }
     .pro-box-text a{
+        width: 10rem;
+        margin-bottom: 1rem;
+        padding: 7px 27px;
+        font-size: 11px;
+        font-weight: 200;
+        cursor: pointer;
+    }
+    .tab-3,.tab-4{
+        margin-bottom: 20px;
+    }
+    .pro-box-2{
+        flex-grow: 1;
+        overflow: hidden;
+    }
+    .pro-box-text-2{
+        margin-bottom: 10px;
+    }
+    .pro-box-text-2 h2{
+        font-size: 18px;
+        letter-spacing: 1px;
+        padding-top: 8px;
+        font-weight: 420;
+        margin-bottom: 12px;
+    }
+    .pro-box-text-2 p{
+        max-width: 600;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 18px;
+        width: 90%;
+        margin: auto;
+        padding-bottom: 25px;
+    }
+    .pro-box-text-2 a{
         width: 10rem;
         margin-bottom: 1rem;
         padding: 7px 27px;
@@ -34260,6 +34523,68 @@ form .form-text{
         font-weight: 200;
         cursor: pointer;
     }
+    #projects-2 h1{
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        padding-top: 2px;
+        font-family: 'Rowdies', cursive;
+        letter-spacing: 1px;
+        font-weight: 550;
+        margin-bottom: 3rem;
+    }
+    .tab-3, .tab-4{
+        width: 90%;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+    }
+    .pro-box-2{
+        flex-grow: 1;
+        overflow: hidden;
+        width: 85%;
+        height: 90%;
+        padding: 15px 0;
+        margin:auto;
+        border-radius: 5px;
+        flex-grow: 1;
+        justify-content: center;
+    }
+    .pro-box-2{
+        margin-bottom: 2rem;
+    }
+    .pro-box-text-2 h2{
+        font-size: 14px;
+        letter-spacing: 1px;
+        padding-top: 10px;
+        font-weight: 400;
+        margin-bottom: 5px;
+    }
+    .pro-box-text-2 p{
+        max-width: 600;
+        font-size: 9px;
+        font-weight: 340;
+        width: 86%;
+        margin: auto;
+        line-height: 19px;
+        padding-bottom: 30px;
+    }
+    .pro-box-text-2 a{
+        width: 12rem;
+        margin-bottom: 1.6rem;
+        padding: 6px 21px;
+        outline: none;
+        border: none;
+        background-color: green;
+        border-radius: 20px;
+        font-size: 10px;
+        letter-spacing: 1px;
+        text-decoration: none;
+        color: white;
+        font-weight: 200;
+        cursor: pointer;
+    }
     #contact h1{
         color: white;
         font-size: 20px;
@@ -35011,6 +35336,68 @@ form .form-text{
         font-weight: 200;
         cursor: pointer;
     }
+    #projects-2 h1{
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        padding-top: 2px;
+        font-family: 'Rowdies', cursive;
+        letter-spacing: 1px;
+        font-weight: 550;
+        margin-bottom: 3rem;
+    }
+    .tab-3, .tab-4{
+        width: 90%;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+    }
+    .pro-box-2{
+        flex-grow: 1;
+        overflow: hidden;
+        width: 85%;
+        height: 90%;
+        padding: 15px 0;
+        margin:auto;
+        border-radius: 5px;
+        flex-grow: 1;
+        justify-content: center;
+    }
+    .pro-box-2{
+        margin-bottom: 2rem;
+    }
+    .pro-box-text-2 h2{
+        font-size: 14px;
+        letter-spacing: 1px;
+        padding-top: 10px;
+        font-weight: 400;
+        margin-bottom: 5px;
+    }
+    .pro-box-text-2 p{
+        max-width: 600;
+        font-size: 9px;
+        font-weight: 340;
+        width: 86%;
+        margin: auto;
+        line-height: 19px;
+        padding-bottom: 30px;
+    }
+    .pro-box-text-2 a{
+        width: 12rem;
+        margin-bottom: 1.6rem;
+        padding: 6px 21px;
+        outline: none;
+        border: none;
+        background-color: green;
+        border-radius: 20px;
+        font-size: 10px;
+        letter-spacing: 1px;
+        text-decoration: none;
+        color: white;
+        font-weight: 200;
+        cursor: pointer;
+    }
     #contact h1{
         color: white;
         font-size: 20px;
@@ -35741,6 +36128,68 @@ form .form-text{
         margin-bottom: 5px;
     }
     .pro-box-text p{
+        max-width: 600;
+        font-size: 9px;
+        font-weight: 340;
+        width: 86%;
+        margin: auto;
+        line-height: 19px;
+        padding-bottom: 30px;
+    }
+    .pro-box-text a{
+        width: 12rem;
+        margin-bottom: 1.6rem;
+        padding: 6px 21px;
+        outline: none;
+        border: none;
+        background-color: green;
+        border-radius: 20px;
+        font-size: 10px;
+        letter-spacing: 1px;
+        text-decoration: none;
+        color: white;
+        font-weight: 200;
+        cursor: pointer;
+    }
+    #projects-2 h1{
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        padding-top: 2px;
+        font-family: 'Rowdies', cursive;
+        letter-spacing: 1px;
+        font-weight: 550;
+        margin-bottom: 3rem;
+    }
+    .tab-3, .tab-4{
+        width: 90%;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+    }
+    .pro-box-2{
+        flex-grow: 1;
+        overflow: hidden;
+        width: 85%;
+        height: 90%;
+        padding: 15px 0;
+        margin:auto;
+        border-radius: 5px;
+        flex-grow: 1;
+        justify-content: center;
+    }
+    .pro-box-2{
+        margin-bottom: 2rem;
+    }
+    .pro-box-text-2 h2{
+        font-size: 12px;
+        letter-spacing: 1px;
+        padding-top: 10px;
+        font-weight: 400;
+        margin-bottom: 5px;
+    }
+    .pro-box-text-2 p{
         max-width: 600;
         font-size: 9px;
         font-weight: 340;
