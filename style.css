@@ -310,10 +310,10 @@ header .logo-img:hover{
 /*/////////////////////////////////*/
 #main{
     width: 100%;
-    min-height: 90vh;
+    min-height: 85vh;
     scroll-behavior: smooth;
     background-color: #000;
-    padding-top: 10px;
+    padding-top: 30px;
 }
 .main-content{
     width: 97%;
@@ -328,7 +328,7 @@ header .logo-img:hover{
 }
 .text-box{
     padding: 20px;
-    margin-top: 10px;
+    margin-top: 30px;
     width: 60%;
     max-width: 550;
     padding: 12px;
@@ -454,7 +454,7 @@ header .logo-img:hover{
     height: 70%;
     flex-grow: 1;
     flex-wrap: wrap;
-    margin-top: 90px;
+    margin-top: 10px;
 }
 .banner-view img{
     flex-grow: 1;
@@ -1250,7 +1250,7 @@ form p{
 @media screen and (max-width:1122px){
     .text-box{
         padding: 20px;
-        margin-top: 120px;
+        margin-top: 30px;
         width: 60%;
         max-width: 550;
         padding: 10px;
@@ -1530,14 +1530,14 @@ form p{
         height: 70%;
         flex-grow: 1;
         flex-wrap: wrap;
-        transform: translateY(-20%);
+        transform: translateY(-6%);
     }
     .banner-view img{
         flex-grow: 1;
         padding-right: 5px;
         max-width: 400px;
         max-height: 1000px;
-        bottom: -20px;
+        bottom: -10px;
     }
     #about-me h1{
         text-align: center;
@@ -1686,10 +1686,60 @@ form p{
         padding-bottom: 5px;
     }
 }
+@media screen and (max-width:964px){
+    #about-me h1{
+        font-size: 25px;
+        padding-top: px;
+        padding-bottom: 3px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+    .solid-9{
+        width: 11rem;
+        margin: auto;
+        margin-bottom: 3rem;
+    }
+    .about-text{
+        width: 100%;
+        padding: 0 40px;
+    }
+    .img-box{
+        max-width: 50%;
+    }
+    .about-text img{
+        max-width: 440px;
+        max-height: 420px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        transform: translateY(-5%);
+    }
+    .about-box{
+        width: 64%;
+        padding: 8px;
+        align-items: flex-start;
+    }
+    .about-text h2{
+        font-size: 15px;
+        padding-top: 3px;
+        letter-spacing: 1px;
+        font-weight: 520;
+        padding-bottom: 3px;
+        margin-bottom: 1.5rem;
+    }
+    .about-text p{
+        font-size: 12px;
+        letter-spacing: .1px;
+        font-weight: 400;
+        line-height: 27px;
+        padding-left: 4px;
+        padding-right: 0px;
+        margin-bottom: 1.2rem;
+    }
+}
 @media screen and (max-width:946px){
     .text-box{
         padding: 20px;
-        margin-top: 20px;
+        margin-top: 10px;
         width: 60%;
         max-width: 600;
         flex-grow: 1;
@@ -1735,13 +1785,13 @@ form p{
     .banner-view{
         width: 35%;
         height: 75%;;
-        transform: translateY(-18%);
+        transform: translateY(-3%);
     }
     .banner-view img{
         padding-right: 10px;
         max-width: 370px;
         max-height: 1000px;
-        bottom: -15px;
+        bottom: -10px;
     }
     .socials-apps a{
         margin: 0 20px;
@@ -2048,6 +2098,78 @@ form p{
         line-height: 40px;
     }
 }
+@media screen and (max-width:890px){
+    .about-text{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .img-box{
+        max-width: 50%;
+    }
+    .about-text img{
+        max-width: 400px;
+        max-height: 400px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        transform: translateY(-5%);
+    }
+    .about-box{
+        width: 65%;
+        padding: 7px;
+        align-items: flex-start;
+    }
+    .about-text h2{
+        font-size: 14px;
+        padding-top: 3px;
+        letter-spacing: 1px;
+        font-weight: 520;
+        padding-bottom: 3px;
+        margin-bottom: 1.5rem;
+    }
+    .about-text p{
+        font-size: 12px;
+        letter-spacing: .1px;
+        font-weight: 400;
+        line-height: 26px;
+        padding-left: 2px;
+        padding-right: 0px;
+        margin-bottom: 1.2rem;
+    }
+}
+@media screen and (max-width:875px){
+    .menu-bar ul li a{
+        padding: 7px 12px;
+        font-weight: 420;
+        flex-grow: 1;
+        font-size: 13px;
+        letter-spacing:.1px;
+    }
+    .nav-list .star{
+        padding: 7px 12px;
+        font-weight: 420;
+        font-size: 13px;
+        letter-spacing:.1px;
+    }
+    .menu-bar .drop-btn{
+        z-index: 1;
+        margin-right: -0.12rem;
+        padding: 7px 12px;
+    }
+    .menu-bar ul li .drop-btn a{
+        font-weight: 520;
+        font-size: 12px;
+        letter-spacing: .1px;
+    }
+    .t-buttons button{
+        width: 6rem;
+        padding: 8px 10px;
+    }
+    .t-buttons button a{
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+}
 @media screen and (max-width:872px){
     .main-content{
         padding: 5px 5px;
@@ -2089,7 +2211,7 @@ form p{
         height: 70%;
         flex-grow: 1;
         flex-wrap: wrap;
-        margin-top: 95px;
+        margin-top: 15px;
     }
     .banner-view img{
         flex-grow: 1;
@@ -2175,40 +2297,6 @@ form p{
         margin-bottom: 10px;
     }
 }
-@media screen and (max-width:875px){
-    .menu-bar ul li a{
-        padding: 7px 12px;
-        font-weight: 420;
-        flex-grow: 1;
-        font-size: 13px;
-        letter-spacing:.1px;
-    }
-    .nav-list .star{
-        padding: 7px 12px;
-        font-weight: 420;
-        font-size: 13px;
-        letter-spacing:.1px;
-    }
-    .menu-bar .drop-btn{
-        z-index: 1;
-        margin-right: -0.12rem;
-        padding: 7px 12px;
-    }
-    .menu-bar ul li .drop-btn a{
-        font-weight: 520;
-        font-size: 12px;
-        letter-spacing: .1px;
-    }
-    .t-buttons button{
-        width: 6rem;
-        padding: 8px 10px;
-    }
-    .t-buttons button a{
-        font-size: 12px;
-        letter-spacing: 1px;
-        font-weight: 600;
-    }
-}
 @media screen and (max-width:865px){
     header .logo{
         width: 50px;
@@ -2285,6 +2373,64 @@ form p{
         font-weight: 600;
     }
 }
+@media screen and (max-width:826px){
+    #about-me h1{
+        font-size: 23px;
+        padding-top: 0px;
+        padding-bottom: 3px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+    .solid-9{
+        width: 9rem;
+        margin: auto;
+        margin-bottom: 3rem;
+    }
+    .about-text{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0 50px;
+        flex-grow: 1;
+    }
+    .img-box{
+        max-width: 60%;
+    }
+    .about-text img{
+        max-width: 450px;
+        max-height: 450px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+    .about-box{
+        width: 85%;
+        padding: 10px;
+        flex-grow: 1;
+        margin-bottom: 15px;
+        align-items: flex-start;
+    }
+    .about-text h2{
+        font-size: 20px;
+        letter-spacing: .1px;
+        font-weight: 520;
+        border-bottom: 1px solid white;
+        padding-bottom: 3px;
+        margin-bottom: 1.5rem;
+    }
+    .about-text p{
+        font-size: 12px;
+        letter-spacing: .1px;
+        color: white;
+        font-weight: 400;
+        line-height: 26px;
+        padding-left: 5px;
+        padding-right: 0px;
+        margin-bottom: 1.5rem;
+    }
+}
 @media screen and (max-width:808px){
     #main{
         width: 100%;
@@ -2301,7 +2447,7 @@ form p{
     }
     .text-box{
         padding: 14px;
-        margin-top: 100px;
+        margin-top: 15px;
         width: 60%;
         max-width: 600;
         flex-grow: 1;
@@ -3387,7 +3533,7 @@ form p{
         width: 100%;
         min-height: 90vh;
         scroll-behavior: smooth;
-        padding-top: 100px;
+        padding-top: 50px;
     }
     .main-content{
         width: 95%;
