@@ -1,213 +1,261 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="John Portfolio">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="John-Portfolio">
     <meta name="author" content="JOHN">
-	<!--------link for icons------------->
-    <!--//////////////////////////////--->
+	<!-------------link for icons--------------->
+    <!--/////////////////////////////////////--->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <!--///////////////////////////////-->
-    <!-------font family link------------>
+    <!--//////////////////////////////////////-->
+    <!------Animate fade-in link---------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!--////////////////////////////////////---->
+    <!--------sweet alert form input link------->
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <!---///////////////////////////////////---->
+    <!-------------font family link------------->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!--//////////////////////////////-->
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="shortcut icon" href="images/logo.jpg">
-	<title>John Portfolio</title>
+    <!--//////////////////////////////////-->
+    <link rel="shortcut icon" href="images/logo.jpg">
+    <link rel="stylesheet" href="css/final.css">
+    <title>John | Portfolio</title>
 </head>
 <body>
-	<!--------------START OFF POINT-------------->
-	<!---////////////////////////////////////---->
-	<header class="menu-bar" id="navLinks" id="top">
-		<a href="#" class="logo">	
-			<img src="images/logo.jpg" class="logo-img" alt="logo">
-		</a>
+    <!----------------START OFF POINT----------------->
+    <!------------------------------------------------>
+    <header class="menu-bar" id="navLinks" id="#top">
 
-		<input type="checkbox" id="menu-bar" hidden> 	
-		
-		<nav class="nav-list">
-			<ul>
-				<li class="active">
-					<a href="#top" class="active">HOME</a>
-				</li>
-				<li>
-					<a href="#about-me">ABOUT</a>
-				</li>
-				<li>
-					<a href="#services">SERVICES
-						<ion-icon name="caret-down-outline"></ion-icon>
-					</a>
-					<div class="sub-menu-1">
-						<ul>
-							<li>
-								<a href="#top">Professional DJ</a>
-							</li>
-							<li>
-								<a href="#top">Music Producer</a>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li>
-					<a href="#projects">Projects</a>
-				</li>
-				<li>
-					<a href="#contact">Contact</a>
-				</li>
-			<ul>
-		</nav>
-		<button class="header-btn">
-            <a href="https://www.youtube.com/@djjakezofficial1706" target="blank">Subscribe</a>
-        </button>
-		
-		<label for="menu-bar" class="checkbtn" alt="menu-btn">
-			<ion-icon name="menu-outline" class="menu-icon">Menu</ion-icon>
-		</label>
-	</header>
+        <a href="#">    
+            <img src="images/logo.jpg" class="logo" alt="logo-img">
+        </a>
 
-	<section id="main">
-		<div class="main-content">
-			<div class="text-box">
-				<h1>Hi There</h1>
-				<h2>My name is <bold> John Mususa</bold></h2>
-				<h3>l'm a <span class="input"></span></h3>
+        <input type="checkbox" id="menu-bar" hidden>    
+        
+        <nav class="nav-list">
+            <ul>
+                <li class="star">
+                    <a href="#top" class="star" title="Home">HOME</a>
+                </li>
 
-				<p>l'm a self-taught Frontend Web Developer, Sales Consultant DJ and Music Producer. l specialise in the IT industry as well as the Entertainment Business Events and  Management services.Feel free to get in Touch with me via my Social Media platforms l look forward to working with You!</p>
+                <li>
+                    <a href="#about-me" title="About">ABOUT</a>
+                </li>
 
-				<div class="socials">
+                <li>
+                    <button class="drop-btn">
+                        <a href="#" class="drop-text">
+                            Services <ion-icon name="chevron-down-outline"></ion-icon>
+                        </a>
+                    </button>
+                    <div class="dropdown-wrapper">
+
+                        <div class="sub-menu-1">
+                            <ul class="sub-items">
+
+                                <li class="item-list">
+                                    <ion-icon name="headset-outline"></ion-icon>
+
+                                    <a href="#DJ-serv">
+                                        <div class="item-list">
+                                            <h3 title="Pro DJ">Professional DJ</h3>
+                                            <p>Mobile | Club DJ</p>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li class="item-list">
+                                    <ion-icon name="chatbubbles-outline"></ion-icon>
+
+                                    <a href="#sales-con">
+                                        <div class="item-list">
+                                            <h3 title="Sales">Sales Consultant</h3>
+                                            <p>Marketing & Sales</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item-list">
+                                    <ion-icon name="musical-notes-outline"></ion-icon>
+
+                                    <a href="#DJ-serv">
+                                        <div class="item-list">
+                                            <h3 title="Producer">Music Producer</h3>
+                                            <p>Beats Maker| Studio Time</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#projects" title="Projects">Projects</a>
+                </li>
+                <li>
+                    <a href="#contact" title="Contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="t-buttons">
+            <button class="header-btn">
+                <a href="https://www.youtube.com/@djjakezofficial1706" target="blank" title="Subscribe">Subscribe</a>
+            </button>
+            
+            <label for="menu-bar" class="checkbtn" alt="menu-btn">
+                <ion-icon name="menu-outline" class="menu-btn-icon">Menu</ion-icon>
+            </label>
+        </div>
+    </header>
+
+    <section id="main">
+        <div class="main-content">
+            <div class="text-box">
+                <h1>Hi There</h1>
+                <h2>My name is <bold title="name"> John Mususa</bold></h2>
+                <h3>l'm a <span class="input"></span></h3>
+
+                <p>l'm a Frontend Web Developer and Sales Consultant  specializing in Marketing and Design as well in the Entertainment Business Management a Professional DJ & Music Producer.Feel free to get in Touch with me on my Social Media platforms l look forward to working with You!</p>
+
+                <div class="socials-apps" title="socials">
+
                     <a href="https://www.facebook.com/john.mususa.92?mibextid=ZbWKwL" style="color:blue;" class="facebook" target="blank">
-                        <ion-icon name="logo-facebook"></ion-icon>
+                        <ion-icon name="logo-facebook" title="facebook"></ion-icon>
                     </a>
 
                     <a href="https://github.com/johnmususa" style="color:grey" class="git" target="blank">
-                        <ion-icon name="logo-github"></ion-icon>
+                        <ion-icon name="logo-github" title="github"></ion-icon>
                     </a>
 
                     <a href="https://www.whatsapp.com" style="color:green;" class="whatsapp" target="blank">
-                        <ion-icon name="logo-whatsapp"></ion-icon>
+                        <ion-icon name="logo-whatsapp" title="whatsapp"></ion-icon>
                     </a>
 
                     <a href="https://www.instagram.com/invites/contact/?i=1rrcjl02ud8fz&utm_content=6bbob45" style="color: red;" class="insta" target="blank">
-                        <ion-icon name="logo-instagram"></ion-icon>
+                        <ion-icon name="logo-instagram" title="instagram"></ion-icon>
                     </a>
 
                     <a href="https://www.linkedin.com/in/john-mususa?trk=contact-info" style="color: #0072b1;" class="link" target="blank">
-                        <ion-icon name="logo-linkedin"></ion-icon>
+                        <ion-icon name="logo-linkedin" title="linkedin"></ion-icon>
                     </a>
                 </div>
-			</div>
-			<div class="banner-view">
-                <img src="images/new-banner.jpg" class="banner-img" alt="banner-image">
             </div>
-		</div>
-	</section>
+            <div class="banner-view">
+                <img src="images/new-banner-2.jpg" class="banner-img" alt="banner-image">
+            </div>
+        </div>
+    </section>
 
-	<section id="about-me">
-		<h1>About Me</h1>
-        <hr class="solid-2" color="white">
+    <section id="about-me" title="about-me">
+        <h1 class="animate__animated animate__bounce">About Me</h1>
+        <hr class="solid-9" color="white">
 
         <div class="about-text">
-            <div class="box">
-                <img src="images/photoshop-3.jpg" alt="about-img" class="about-image" class="glow-img" alt="About-me-image">
+            <div class="img-box">
+                <img src="images/photoshop-3.jpg" alt="about-img" class="about-image">
             </div>
 
             <div class="about-box">
                 <h2>Web Developer | Sales Consultant|  Professional DJ</h2>
                 <p>l'm an aspiring Frontend Web Developer l specialise in coding Web Design l create interactive pixel perfect webites responsive and user friendly accessible to all users.l'm a Sales Consultant in Marketing providing better customer services as well as Entertainment as a Professional DJ having the best of both worlds of Technology and Business wise.My expertise lies within Frontend Development and my main Tech Languege skills are <bold>HTML|CSS|Javascript|Bootstrap</bold> and adjusting to make sure of Php and MySql.
                 </p>
-                     
-                <button class="cv-btn">
-                    <a href="JOHN-CV.pdf" download target="blank" title="CV">Download CV</a>
-                </button>
+                    
+                <div class="load-btn">
+                    <button class="cv-btn">
+                        <a href="JOHN-CV.pdf" download target="blank" title="CV-Download">Download CV</a>
+                    </button>
+                </div>
             </div>
         </div>
-	</section>
-	<section id="services">
+        <hr class="solid-b" color="gray">
+    </section>
+
+    <section id="services" title="services">
         <h1>Services</h1>
         <hr class="solid-2" color="white">
 
-        <div class="service-box">
-            <div class="box-container-1">
-                <div class="card">
-                    <h2>Web Developer</h2>
-                    <img src="images/lim-3.jpg" alt="image" class="card-img">
-                    <div class="card-text">
-                        <p> As a Web Developer creativity is an important aspect to creating some of the most amazing Web Designs that are user friendly easy Navigation pixel clear coding and good interface
-                        </p>
-                        <button class="card-btn" href="#form-link">
-                            <a href="#form-link">Hire Me</a>
-                        </button>
-                    </div>
-                </div>
-                <div class="card" id="card-1">
-                    <h2>Professional DJ</h2>
-                    <img src="images/art-1.jpg" alt="image" class="card-img">
-                    <div class="card-text">
-                        <p> Versatile Professional DJ avaliable for any Events|Corporal Events:
-                            Wedding DJ| Birthday Party| Private Events| Club Radio| Mobile DJ.You 
-                            request a DJ we Bring the Vibe to You. 
-                        </p>
-                        <button class="card-btn">
-                            <a href="#form-link">Book Now</a>
-                        </button>
-                    </div>
-                </div>
+        <div class="container">
+            <div class="card">
+                <h2 title="web-Design">Web Developer</h2>
+                <img src="images/serv-1.png">
+                <p>A Business Website is an important aspect to running a smooth Business service.Allow me to bring your ideas to live creating some amazing user-friendly Websites easy to navigate fully responsive. </p>
+
+                <button class="card-btn">
+                    <a href="#target">Hire Me</a>
+                </button>
+            </div> 
+            <div class="card">
+                <h2 title="sales-consult" id="sales-con">Sales Consultant</h2>
+                <img src="images/serv-3.png">
+                <p>As a Sales Consultant it's all about building close relationship with your clients to provide better quality services as CRM manage and ensure sales effectively ensure customers are satisfied </p>
+
+                <button class="card-btn">
+                    <a href="#target">Let's Talk</a>
+                </button>
+            </div> 
+        </div>
+        <div class="container">
+            <div class="card">
+                <h2 title="Marketing-design">Marketing & Design</h2>
+                <img src="images/serv-2.png">
+                <p>Marketing and Design ensure your Business functions effectively ranking well on Google drawing new clients improving business sales providing quality services weather it be Email or Social Media Marketing.</p>
+ 
+                <button class="card-btn">
+                    <a href="#target">Get in Touch</a>
+                </button>
             </div>
-            <div class="box-container-2">
-                <div class="card">
-                    <h2>Music Producer</h2>
-                    <img src="images/lim-7.jpg" alt="image" class="card-img">
-                    <div class="card-text">
-                        <p>Weather you an Upcoming Artist Singer,Rapper or Song Writer looking for Studio Time or Beats don't be shy to get in Touch with me.Action Speak louder than words.
-                        </p>
-                        <button class="card-btn">
-                            <a href="#form-link">Book Session</a>
-                        </button>
-                    </div>
-                </div>
-                <div class="card" id="card-2">
-                    <h2>Sales Consultant</h2>
-                    <img src="images/lim-10.jpg" alt="image" class="card-img">
-                    <div class="card-text">
-                        <p> Experience in Marketing as Sales Consultant working closing with CRM Customer Relationship
-                            Management building a close relationship with customers providing better quality Customer Servives
-                        </p>
-                        <button class="card-btn">
-                            <a href="#form-link">Contact</a>
-                        </button>
-                    </div>
-                </div>
+             <div class="card">
+                <h2 title="DJ-Producer" id="DJ-serv">Pro DJ & Producer</h2>
+                <img src="images/serv-5.png">
+                <p>Versatile Mobile & Club DJ avaliable for your Private Events (Weddings,Birthday-Parties,Staff-Party etc) and a Music Producer, weather you an upComing artist looking for Beats or Studio Time.Get in Touch!</p>
+
+                <button class="card-btn">
+                    <a href="#target">Book Now</a>
+                </button>
             </div>
         </div>
-        <div class="skills">
-            <h3> Skill Set</h3>
-            <hr class="solid-3" color="white">
-            <div class="content">
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JAVASCRIPT</li>
-                    <li>BOOTSTRAP</li>
-                    <li>CANVA</li>
-                    <li>FIGMA</li>
-                    <li>PHOTOSHOP</li>
-                    <li>MARKETING</li>
-                </ul>
+
+        <div class="faqs">
+            <button class="accordion">Importance of a Website for Business ></button>
+            <div class="panel">
+              <p>Allow me to be your Designer for your Businesses bringing your ideas to live at affordable prices.Having a Website for one's business is effective and ensures higher sales, new customers while ranking high on Google platforms. <a href="#target">Get in Touch with Me!</a></p>
             </div>
         </div>
     </section>
 
+    <div class="skills">
+        <h3> Skill Set</h3>
+        <hr class="solid-3" color="white">
+        <div class="content-items">
+            <ul title="skills">
+                <ol>HTML</ol>
+                <ol>CSS</ol>
+                <ol>JAVASCRIPT</ol>
+                <ol>GITHUB</ol>
+                <ol>BOOTSTRAP</ol>
+                <ol>CANVA</ol>
+                <ol>Sketch&Design</ol>
+                <ol>MICROSOFT 365</ol>
+                <ol>MARKETING</ol>
+                <ol>Administration</ol>
+                <ol>Creativity</ol>
+                <ol>Responsive Design</ol>
+             </ul>
+        </div>
+    </div>
+
     <section id="dj">
         <h1>DJ Entertainment Services</h1>
         <div class="dj-blog">
-            
-            <video width="700" height="320" controls>
-                <source src="video-2.mp4" type="video/mp4">
-            </video>
+            <div class="video-box">
+                <video controls title="DJ-video">
+                    <source src="video-2.mp4" type="video/mp4">
+                </video>
+            </div>
 
             <div class="blog-card">
                 <img src="images/art-1.jpg" alt="dj-img" class="blog-img">
@@ -228,229 +276,266 @@
     </section>
 
     <section id="projects">
-        <h1>My Projects <ion-icon name="options-outline"></ion-icon></h1>
-        <div class="project-box">
-            <div class="tab-1">
-                <div class="pro-box-1">
-                    <video width="540" height="270" controls>
+        <h3>My Projects <ion-icon name="options-outline" class="pro-icon"></ion-icon></h3>
+        <div class="project-list">
+            <div class="project-card">
+                <div class="card-vid">
+                    <video title="KFC-vid" controls>
                         <source src="kfc-video.mp4" type="video/mp4" alt="KFC-Video">
                     </video>
-                    <div class="pro-box-text">
-                        <h2>KFC Website</h2>
-                        <p>A KFC interactive Design user friendly Design with good content layout.</p>
-
-                        <a href="https://johnmususa.github.io/kfc" class="box-btn" target="blank">Check Out</a>
-                    </div>
                 </div>
-                <div class="pro-box-1">
-                    <video width="540" height="270" controls>
+                <div class="card-details">
+                    <h1>KFC Website</h1>
+                    <p>An interactive Website with amazing features uses Google maps for different locations & external links like MrD for orders.</p>
+                </div>
+
+                <div class="pro-btn">
+                    <a href="https://johnmususa.github.io/kfc" class="box-btn" target="blank">Check Out</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-vid">
+                    <video title="Starbucks-vid" controls>
                         <source src="starbucks-video.mp4" type="video/mp4" alt="Starbucks-video">
                     </video>
-                    <div class="pro-box-text">
-                        <h2>Starbuck Website</h2>
-                        <p>The Famous Starbucks Design Layout with friendly interface worth having a look at</p>
-
-                        <a href="https://johnmususa.github.io/starbucks" class="box-btn" target="blank">Check Out</a>
-                    </div>
+                </div>
+                <div class="card-details">
+                    <h1>Starbucks Website</h1>
+                    <p>The Famous Starbucks Web Design layout with friendly interface worth having a look at.</p>
+                </div>
+                <div class="pro-btn" id="middle">
+                    <a href="https://johnmususa.github.io/starbucks" class="box-btn" target="blank">Check Out</a>
                 </div>
             </div>
-            <br>
-            <div class="tab-2">
-                <div class="pro-box-1">
-                    <video width="540" height="270" controls>
+
+            <div class="project-card">
+                <div class="card-vid">
+                    <video title="hotel-vid" controls>
                         <source src="grandhotel-video.mp4" type="video/mp4" alt="grandhotel-video">
                     </video>
-                    <div class="pro-box-text">
-                        <h2>GrandHotel Website</h2>
-                        <p>GrandHotel one of my very first Designs to the concept of Hotel Management</p>
-
-                        <a href="https://johnmususa.github.io/grandhotel" class="box-btn" target="blank">Check Out</a>
-                    </div>
                 </div>
-                <div class="pro-box-1">
-                   <video width="530" height="270" controls>
+                <div class="card-details">
+                    <h1>Grand Hotel</h1>
+                    <p>Grand Hotel one of my very first Designs the layout of Hotel Management services</p>
+                </div>
+                 <div class="pro-btn" id="middle">
+                    <a href="https://johnmususa.github.io/grandhotel" class="box-btn" target="blank">Check Out</a>
+                </div>
+            </div>
+        </div>
+        <div class="project-list">
+            <div class="project-card">
+                <div class="card-vid">
+                    <video title="Dilpack-vid" controls>
                         <source src="dilpack-video.mp4" type="video/mp4" alt="Dilpack-Video-view">
                     </video>
-                    
-                    <div class="pro-box-text">
-                        <h2>Dilpack SA</h2>
-                        <p>An E-Commence Website l Designed for a Company called Dilpack SA, with the use of HTML|CSS|Javascript</p>
+                </div>
+                <div class="card-details">
+                    <h1>Dilpack Website</h1>
+                    <p>An E-Commence Website l Designed for a Company called Dilpack SA, with the use of HTML|CSS|Javascript</p>
+                </div>
 
-                        <a href="https://johnmususa.github.io/dilpack" class="box-btn" target="blank">Check Out</a>
-                    </div>
+                <div class="pro-btn">
+                    <a href="https://johnmususa.github.io/dilpack" class="box-btn" target="blank">Check Out</a>
                 </div>
             </div>
-            <div class="tab-2">
-                <div class="pro-box-1">
-                   <video width="530" height="270" controls>
+
+            <div class="project-card">
+                <div class="card-vid">
+                    <video title="Dino-vid" controls>
                         <source src="dino.mp4" muted autoplay loop type="video/mp4" alt="Dino-Valley-Video">
                     </video>
-                    
-                    <div class="pro-box-text">
-                        <h2>Dinosaure Valley</h2>
-                        <p>A  Simple Animated Video Website with the use of HTML|CSS|Javascript</p>
-
-                        <a href="https://johnmususa.github.io/dinovalley/" class="box-btn" target="blank">Check Out</a>
-                    </div>
                 </div>
-                <div class="pro-box-1">
-                   <img src="images/suzy.jpg">
-                    
-                    <div class="pro-box-text">
-                        <h2>Suzy's Farms Market</h2>
-                        <p>An E-Commence online store,Updates are currently install link be avaliable soon enough</p>
-
-                        <a href="#" class="box-btn">Check Out</a>
-                    </div>
+                <div class="card-details">
+                    <h1>Dinosaure Valley</h1>
+                    <p>A  Simple Animated Video Website with the use of HTML|CSS|Javascript</p>
                 </div>
-            </div>  
+                <div class="pro-btn">
+                    <a href="https://johnmususa.github.io/dinovalley/" class="box-btn" target="blank">Check Out</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-img">
+                    <img src="images/suzy.jpg" title="suzy-website">
+                </div>
+                <div class="card-details">
+                    <h1>Suzy's Farmers Market</h1>
+                    <p>An E-Commence online store,Updates are currently install link be avaliable soon enough</p>
+                </div>
+                 <div class="pro-btn">
+                    <a href="#" target="blank">Check Out</a>
+                </div>
+            </div>
         </div>
-    </section>
-    <section id="projects">
-        <h1>2024 Web Designs <ion-icon name="file-tray-full-outline"></ion-icon></h1>
-        <div class="project-box">
-            <div class="tab-1">
-                <div class="pro-box-1">
-                    <img src="images/absa.jpg">
 
-                    <div class="pro-box-text">
-                        <h2>ABSA| Help Center</h2>
-                        <p>Creative ABSA Help Center Website providing Customer Service and Information regarding any issues faced by Client and Provide Solutions</p>
+        <h4>2024 Designs <ion-icon name="file-tray-full-outline"></ion-icon class="d-icon"></h4>
 
-                        <a href="https://johnmususa.github.io/absa/" class="box-btn" target="blank">Check Out</a>
-                    </div>
+        <div class="project-list">
+            <div class="project-card">
+                <div class="card-img">
+                   <img src="images/absa.jpg" alt="absa-website">
                 </div>
-                <div class="pro-box-1">
-                    <img src="images/retail.jpg">
+                <div class="card-details">
+                    <h1>ABSA| Help Center</h1>
+                    <p>Creative ABSA Help Center Website providing Customer Service and Information regarding any issues faced by Client and Provide Solutions</p>
+                </div>
 
-                    <div class="pro-box-text">
-                        <h2>Starbucks Retail</h2>
-                        <p>Retail Store with great Rewards and gifts on signup,
-                        win rewards with starbucks and discover more and redeem your great points.</p>
-
-                        <a href="https://johnmususa.github.io/retail/" class="box-btn">Check Out</a>
-                    </div>
+                <div class="pro-btn">
+                    <a href="https://johnmususa.github.io/absa/" class="box-btn" target="blank">Check Out</a>
                 </div>
             </div>
-                <br>
-            <div class="tab-1">
-                <div class="pro-box-1">
-                    <img src="images/storm.jpg">
 
-                    <div class="pro-box-text">
-                        <h2>Storm-x-Photography</h2>
-                        <p>A Photography Website for a small time Business service that covers Wedding Photography light  and Sound services 2Brothers Event</p>
-
-                        <a href="https://johnmususa.github.io/stormx/" class="box-btn" target="blank">Check Out</a>
-                    </div>
+            <div class="project-card">
+                <div class="card-img">
+                    <img src="images/retail.jpg" alt="starbucks-website">
                 </div>
-                <div class="pro-box-1">
-                    <img src="images/supreme.jpg">
-                    <div class="pro-box-text">
-                        <h2>Supreme Cakes</h2>
-                        <p>Small Business that specialize in cake and covers wide range of Events from Birthday party cakes to Wedding Cakes</p>
-
-                        <a href="https://johnmususa.github.io/supremecakes/" class="box-btn" target="blank">Check Out</a>
-                    </div>
+                <div class="card-details">
+                    <h1>Starbucks Retail</h1>
+                    <p>Retail Store with great Rewards and gifts on signup,win rewards with starbucks and discover more and redeem your great points.</p>
+                </div>
+                <div class="pro-btn">
+                    <a href="https://johnmususa.github.io/retail/" class="box-btn">Check Out</a>
                 </div>
             </div>
-            <br>
-            <div class="tab-1">
-                <div class="pro-box-1">
-                   <img src="images/stan.jpg">
-                    
-                    <div class="pro-box-text">
-                        <h2>Stanley Tourist Guide</h2>
-                        <p>A Tourist Guide website for a Tourist guide service client exploring the beauty of Cape Town's history tourism with your Guide Stanley.</p>
 
-                        <a href="https://johnmususa.github.io/stanleyguide/" class="box-btn" target="blank">Check Out</a>
-                    </div>
+            <div class="project-card">
+                <div class="card-img">
+                    <img src="images/storm-1.jpg" alt="stormx-website"> 
                 </div>
-                <div class="pro-box-1">
-                   <img src="images/radio.jpg">
-                    
-                    <div class="pro-box-text">
-                        <h2>Radio Station</h2>
-                        <p>Entertainment Radio website with your local best Music and live artist on air.Final Updates are been conducted and link will be active for a full review.</p>
+                <div class="card-details">
+                    <h1>Storm-x-Photography</h1>
+                    <p>A Photography Website for a small time Business service that covers Wedding Photography light  and Sound services 2Brothers Event</p>
+                </div>
+                 <div class="pro-btn">
+                    <a href="https://johnmususa.github.io/stormx/" class="box-btn" target="blank">Check Out</a>
+                </div>
+            </div>
+        </div>
+        <div class="project-list">
+            <div class="project-card">
+                <div class="card-img">
+                   <img src="images/supreme.jpg" alt="supreme-cake-website">
+                </div>
+                <div class="card-details">
+                    <h1>Supreme Cakes</h1>
+                    <p>Small Business that specialize in cake and covers wide range of Events from Birthday party cakes to Wedding Cakes</p>
+                </div>
 
-                        <a href="#" target="blank">Check Out</a>
-                    </div>
+                <div class="pro-btn">
+                    <a href="https://johnmususa.github.io/supremecakes/" class="box-btn" target="blank">Check Out</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-img">
+                    <img src="images/stan.jpg" alt="stanley-website">
+                </div>
+                <div class="card-details">
+                    <h1>Stanley Tourist Guide</h1>
+                    <p>A Tourist Guide website for a Tourist guide service client exploring the beauty of Cape Town's history tourism with your Guide Stanley.</p>
+                </div>
+                <div class="pro-btn">
+                    <a href="https://johnmususa.github.io/stanleyguide/" class="box-btn" target="blank">Check Out</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-img">
+                    <img src="images/radio.jpg" alt="radio-website">
+                </div>
+                <div class="card-details">
+                    <h1>Radio Station</h1>
+                    <p>Entertainment Radio website with your local best Music and live artist on air.Final Updates are been conducted and link will be active for a full review.</p>
+                </div>
+                 <div class="pro-btn">
+                    <a href="#" target="blank">Check Out</a>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="contact">
-        <h1>Contact Me</h1>
-        <div class="sub-contact" id="form-link">
+        <h1 id="target">Contact Me</h1>
+        <hr class="solid-c" color="white">
 
-            <div class="contact-box">
-                <form action="https://formspree.io/f/xleygbpr" method="POST">
+        <div class="contact-box">
+            <div class="form-link">
+                <form action="https://formspree.io/f/xleygbpr" method="POST" title="contact-form">
 
-                    <input type="text" name="Name" placeholder="Name and Surname" required>
-                    <br>
+                    <input type="text" name="Name" placeholder="Name & Surname" required class="form-name">
+
                     <input type="email" name="Email" placeholder="Email Address" required>
-                    <br>
+                    
                     <input type="tel" name="Phone Number" placeholder="Phone Number" required>
-                    <br>
-                    <textarea name="Message" cols="30" rows="10" placeholder="Message.." class="message" class="message"></textarea>
-                    <br>
-                    <input type="submit" value="Submit" required class="submit-btn">
 
-                    <p class="form-text">l look forward to working with You!</p>
+                    <textarea name="Message" cols="30" rows="7" placeholder="Send Message.." class="message"></textarea>
+                
+                    <input type="submit" value="Submit" class="sub-btn" required>
+                    
+                    <p class="form-text">l look forward to working with You!</p> 
                 </form>
             </div>
-            <div class="form-img">
-                <img src="images/photoshop-3.jpg" alt="image" class="form-img">
+             <div class="form-img">
+                <div class="pic">
+                    <img src="images/photoshop-3.jpg" alt="image" class="form-img">
+                </div>
             </div>
-        </div>   
-       
+        </div>
     </section>
 
     <footer id="footer">
         <h2>Quick Access</h2>
+        <hr class="solid-end" color="white">
+
         <div class="footer-box">
-            <div class="footer-link">
-                <h1>John Mususa</h1>
-                <lo>
-                    <li>
-                        <ion-icon name="call-outline">
-                        </ion-icon>  Cell: 073 314 3667
-                    </li>
-                    <li>
-                        <ion-icon name="logo-whatsapp"></ion-icon>  Whatsapp: 068 568 0276
-                    </li>
-                    <li>
-                        <ion-icon name="mail-unread-outline"></ion-icon>   Email:  djjakezofficial85@gmail.com
-                    </li>
-                </lo>
+
+            <div class="footer-content">
+                <div class="footer-head">
+                    <h1>John Mususa</h1>
+                </div>
+                <ul class="footer-list">
+                    <ol>
+                        <ion-icon name="logo-whatsapp"></ion-icon>  
+                        <bold>Whatsapp :</bold> 073 314 3667
+                    </ol>
+                    <ol>
+                        <ion-icon name="mail-unread-outline"></ion-icon>  <bold>Email :</bold> djjakezofficial85@gm.com
+                    </ol>
+                </ul>
             </div>
-            <div class="footer-link">
-                <h1>Menu Link</h1>
-                <ul>
+            <div class="footer-content">
+                <div class="footer-head">
+                    <h1>Menu Links</h1>
+                </div>
+                <ul class="footer-list" title="menu-links">
                     <li>
-                        <a href="#top">Home</a>
+                        <a href="#top" title="Home">Home</a>
                     </li>
                     <li>
-                        <a href="#about-me">About</a>
+                        <a href="#about-me" title="About">About</a>
                     </li>
                     <li>
-                        <a href="#projects">Projects</a>
+                        <a href="#projects" title="Projects">Projects</a>
                     </li>
                     <li>
-                        <a href="#contact">Contact</a>
-                    </li> 
+                        <a href="#contact" title="Contact">Contact</a>
+                    </li>
                     <li>
-                        <a href="#services">Services</a>
-                    </li>           
+                        <a href="#services" title="Services">Services</a>
+                    </li>
                     <li>
-                        <a href="#">DJ&Music</a>
+                        <a href="#" title="DJ-Music">DJ&Music<t/a>
                     </li>
                 </ul>
             </div>
-            <div class="footer-link">
-                <h1 class="social-head">Social Media</h1>
-                <ol class="social-footer">
+            <div class="footer-content">
+                <div class="footer-head">
+                    <h1 class="social-header">Social Media</h1>
+                </div>
+                <ol class="social-links" title="social-links">
+
                     <a href="https://www.facebook.com/john.mususa.92?mibextid=ZbWKwL" target="blank">
                         <ion-icon name="logo-facebook" style="color: blue;"></ion-icon>
                     </a>
@@ -474,13 +559,24 @@
                     <a href="https://www.youtube.com/@djjakezofficial1706" target="blank">
                         <ion-icon name="logo-youtube" style="color: red;"></ion-icon>
                     </a>
+
+                    <a href="https://www.tiktok.com/@dankie_jakez" target="blank">
+                        <ion-icon name="logo-tiktok" style="color: red;"></ion-icon>
+                    </a>
                 </ol>
             </div>
         </div>
     </footer>
-    <div class="owner">
-        <h1>2023 &copy; Copyrights John Mususa All Rights Reserved</h1> 
+    <div class="copy" title="owner">
+        <h1>
+            2023 &copy; Copyrights | JOHN MUSUSA | All Rights Reserved
+        </h1>
+        <a href="#top" class="top-btn">
+            <ion-icon name="chevron-up-outline"></ion-icon>
+        </a>
     </div>
+        
+
 
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
@@ -500,8 +596,6 @@
         }
     }
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
-    <!------------END OF FULL WEBSITE------------------>
-    <!-------///////////////////////////////----------->
-    <!------------------------------------------------->
