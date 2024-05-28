@@ -455,10 +455,12 @@ header .logo-img:hover{
     flex-grow: 1;
     flex-wrap: wrap;
     margin-top: 10px;
+    transform: translateY(-7%);
 }
 .banner-view img{
     flex-grow: 1;
     padding-right: 10px;
+    bottom: -30px;
     max-width: 430px;
     max-height: 1000px;
 }
