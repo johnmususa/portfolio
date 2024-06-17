@@ -63,7 +63,7 @@ header .logo{
     border: 2px solid green;
     cursor: pointer;
 }
-header .logo-img:hover{
+header .logo:hover{
     transform: rotate(360deg);
     transition: 1s ease-in-out;
 }
