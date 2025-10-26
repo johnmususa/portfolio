@@ -1,0 +1,6223 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: all .3s  ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+}
+:root{
+    --primary-color: green;
+    --text-color: #fff;
+    --bg-color-main: #000;
+    --solid-line: rgba(128, 128, 128, 0.507);
+     --gray: #847f90;
+    --link-gray:#666666;
+    --link-gray-hover:#171717;
+    --gray: #e1e1e1;
+    --gray-border: #e6e6e6;
+     --primary: #000000;
+    --background: #fafafa;
+    --secondary-background:#f2f2f2;
+    --white: #fcfcfc;
+    --navbar-height: 64px;
+}
+body{
+	font-size: 62.5%;
+}
+header{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px;
+	position: sticky;
+	top: 0;
+	flex-grow: 1;
+	flex-wrap: wrap;
+	z-index: 1000;
+	background: var(--bg-color-main);
+	box-shadow: 2px 4px 3px 2px rgb(9, 141, 20);
+}
+header .logo{
+	width: 75px;
+	height: 70px;
+	border-radius: 50%;
+	border: 2px solid green;
+	cursor: pointer;
+}
+header .logo:hover{
+	transform: rotate(360deg);
+	transition: 1s ease;
+}
+header .navigation{
+    padding: 10px;
+}
+header .nav-list ul li{
+	display: inline-flex;
+	list-style: none;
+	flex-grow: 1;
+    position: relative;
+    min-height: 2.25rem;
+}
+header .nav-list .home{
+    background-color: green;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+header .nav-list ul li a{
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 420;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+header .nav-list ul li a:hover{
+	background-color: green;
+	color: var(--text-color);
+	border-radius: 5px;
+	transition: .3s ease-in-out;
+	cursor: pointer;
+}
+header .nav-list > ul li button{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+header .nav-list > ul li > button{
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    align-items: center;
+    min-height: 2.25rem;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 420;
+    gap: 0.30rem;
+    font-family: 'Poppins', sans-serif;
+    flex-wrap: nowrap;
+    border-radius: 5px;
+    border: .1px solid var(--solid-line);
+    padding: 10px 20px;
+    white-space: nowrap;
+    background: none;
+    display: flex;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+header .nav-list > ul li > button ion-icon{
+    margin-top: 2px;
+    fill: var(--link-gray);
+    transition: all 0.2s ease-in-out;
+}
+header .nav-list > ul li:hover > button ion-icon{
+    fill: var(--link-gray-hover);
+    rotate: 180deg;
+}
+header .nav-list > ul li:hover > button{
+    color: var(--text-color);
+    background: green;
+    border: none;
+}
+header .nav-list > ul li:hover .dropdown{
+    display: block;
+}
+header .dropdown ul li a:hover{
+    background-color: var(--white);
+}
+
+@keyframes fadein{
+    from{
+        opacity: 0;
+        transition: scale(0.99) translateY(-0.7em);
+        transform-origin: top;
+    }
+    to{
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+.dropdown-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 3rem;
+}
+.dropdown{
+    border-radius: 0.3rem;
+    background: var(--gray);
+    display: none;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 75rem;
+    border: 1px solid var(--white);
+    box-shadow: 0 50px 100px -20px rgba(0,0,0,.12), 0 30px 60px -30px rgba(0,0,0, .15);
+    z-index: 2;
+    animation: fadein 0.2s ease-in-out;
+}
+.list-items-with-description{
+    list-style-type: none;
+    display: grid;
+    width: 100%;
+    flex-grow: 1;
+    align-items: flex-start;
+    text-align: left;
+    grid-template-columns: repeat(2, 250px);
+}
+.list-items-with-description li{
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0.4rem;
+    gap: 1rem;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+    border-radius: 0.375rem;
+}
+.list-items-with-description li:hover{
+    background: var(--secondary-background);
+}
+.list-items-with-description li ion-icon{
+    stroke: var(--link-gray-hover);
+    width: 1.1rem;
+    height: 1.1rem;
+}
+.item-title h3{
+    font-weight: 520;
+    letter-spacing: .1px;
+    font-size: 14px;
+    margin-bottom: 7px;
+    color:black;
+}
+.item-title p{
+    font-size: 0.7rem;
+    white-space: nowrap;
+    color: gray;
+    font-weight: 400;
+}
+/*///// menu+youtube-btns////*/
+/*//////////////////////////*/
+.buttons{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+.buttons button{
+    width: 9rem;
+    padding: 12px 10px;
+    outline: none;
+    background: green;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.buttons .youtube-btn a{
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 520;
+    text-decoration: none;
+}
+.buttons button:hover{
+    background: transparent;
+    border: 1px solid grey;
+}
+.checkbtn{
+    float: right;
+    display: none;
+    transition: .3s ease-in-out;
+}
+.checkbtn ion-icon{
+    font-size: 40px;
+    width: 30px;
+    height: 30px;
+    color:white;
+    border: 1px solid black;
+    border-radius: .5rem;
+    padding: .1rem 1.2rem;
+    cursor: pointer;
+}
+/*///////////////////////////////*/
+/*//////////////////////////////*/
+#main{
+	width: 100%;
+	min-height: 80vh;
+	background-color: var(--bg-color-main);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.main-content{
+    display: grid;
+    grid-template-columns: 55% 1fr;
+    grid-gap: 30px;
+    place-items: center;
+    align-items: center;
+    padding: 0px 20px 20px 25px;
+    flex-grow: 1;
+}
+.text-box{
+    padding: 10px;
+    width: 95%;
+    align-items: flex-start;
+}
+.text-box h1{
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-size: 400;
+    color: white;
+    padding-bottom: 4px;
+}
+.text-box h2{
+    font-size: 41px;
+    letter-spacing: 2px;
+    font-weight: 420;
+    font-family: 'Rowdies', cursive;
+    color: white;
+    animation: anim 2s;
+    padding-bottom: 4px;
+}
+.text-box bold{
+    color: rgb(14, 156, 14);
+    font-family: 'Rowdies', cursive;
+    font-weight: 520;
+    animation: anim 2s;
+    font-size: 43px;
+}
+.text-box h3{
+    color: white;
+    font-family: 'Rowdies', cursive;
+    font-size: 43px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    animation: anim 2s .5s backwards;
+    margin-bottom: 1rem;
+}
+.text-box .input{
+    color: rgb(14, 156, 14);
+    font-weight: 520;
+    font-family: 'Rowdies', cursive;
+    font-size: 45px;
+    animation: anim 2s .5s backwards;
+}
+.text-box p{
+    max-width: 570px;
+    font-size: 13px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: justify;
+    line-height: 27px;
+    animation: anim 1s .1s backwards;
+    margin-bottom: 2rem;
+}
+.socials-apps{
+    display: inline-flex;
+}
+.socials-apps a{
+    animation: anim 1s .1s backwards;
+    margin: 0 25px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.5s;
+    font-size: 2.5em;
+    transition: .3s ease-in-out;
+    outline: none;
+    border:none;
+    color: white;
+    background-color: ghostwhite;
+    -webkit-box-reflect:below 5px linear-gradient(to bottom, rgba(0, 0, 0, 0.0)
+    ,rgba(0, 0, 0, 0.2));
+    margin-bottom: 10px;
+}
+.socials-apps ion-icon{
+    border-radius: 50%;
+}
+.socials-apps .facebook:hover, .facebook ion-icon:hover{
+    color: white;
+    background-color: blue;
+    transform: scale(1.2);
+}
+.socials-apps .git:hover, .git ion-icon:hover{
+    background-color: black;
+    color: white;
+    transform: scale(1.2);
+}
+.socials-apps .git:hover{
+    border: 1px solid grey;
+}
+.socials-apps .whatsapp:hover, .whatsapp ion-icon:hover{
+    background-color: green;
+    color: white;
+    transform: scale(1.2);
+}
+.socials-apps .insta:hover, .insta ion-icon:hover{
+    background-color: darkred;
+    color: white;
+    transform: scale(1.2);
+}
+.socials-apps .link:hover, .link ion-icon:hover{
+    background-color: darkblue;
+    color: white;
+    transform: scale(1.2);
+}
+@keyframes anim{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.banner-view img{
+    width: 100%;
+}
+/*//////////////////////////////////////*/
+/*/////////////////////////////////////*/
+#about{
+    width: 100%;
+    padding-top: 25px;
+    border-top: .1px solid rgba(128, 128, 128, 0.507);
+    background-color:var(--bg-color-main);
+}
+#about h1{
+    text-align: center;
+    font-size: 27px;
+    padding-bottom: 3px;
+    font-family: 'Rowdies', cursive;
+    letter-spacing: 1px;
+    color:var(--text-color);
+    font-weight: 400;
+}
+.solid-1{
+    width: 17%;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+.about-container{
+    display: grid;
+    grid-template-columns: 1fr 58%;
+    place-items: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 0px 30px 30px 30px;
+    grid-gap: 5px;
+}
+.about-img img{
+    width: 80%;
+    border-radius: 10px;
+    box-shadow:0  2px 4px 0 rgb(22, 255, 22);
+}
+.about-box{
+    padding: 12px;
+    justify-content: center;
+    align-items: flex-start;
+}
+.about-box h2{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 520;
+    border-bottom: 1px solid white;
+    padding-bottom: 3px;
+    margin-bottom: 1.5rem;
+}
+.about-box p{
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: white;
+    text-align: justify;
+    font-weight: 400;
+    line-height: 27px;
+    margin-bottom: 1.5rem;
+    align-self: start;
+}
+.cssbuttons-io-button {
+  background-color: green;
+  color: white;
+  font-family: inherit;
+  padding: 0.38em;
+  padding-left: 1.2em;
+  font-size: 15px;
+  font-weight: 450;
+  border-radius: 10px;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #fff;
+  overflow: hidden;
+  position: relative;
+  height: 3em;
+  width: 13rem;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.3em;
+  width: 2.3em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.5em 0.2em ghostwhite;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.2rem;
+  transition: transform 0.3s;
+  color: green;
+}
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+/*/////////////////////////////////*/
+/*////////////////////////////////*/
+#services{
+    width: 100%;
+    padding-top: 30px;
+    border-top: .1px solid var(--solid-line);
+    background-color: var(--bg-color-main);
+}
+#services h1{
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 3px;
+    font-weight: 520;
+    font-family: 'Rowdies', cursive;
+    color: var(--text-color);
+}
+.solid-2{
+    width: 16%;
+    margin:auto;
+    margin-bottom: 2.5rem;
+}
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    padding: 10px 30px 10px 30px;
+    margin-bottom: 3rem;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+.services-container .card{
+    padding: 11px;
+    border: 1px solid rgba(255, 255, 255, 0.486);
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition:  .2s ease;
+}
+.services-container .card:hover{
+    background-color: #0b2e06;
+    box-shadow: 0 5px 10px rgb(5, 158, 5);
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+.services-container .card h2{
+    text-align: center;
+    font-size: 23px;
+    padding-top: 5px;
+    letter-spacing: 1px;
+    font-weight: 520;
+    color: white;
+    border-bottom: 1px solid white;
+    margin-bottom: 15px;
+}
+.services-container .card > img{
+    margin-bottom: 12px;
+    width: 50%;
+    margin-bottom: 14px;
+    height: 200px;
+}
+.services-container .card p{
+    font-size: 13px;
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 23px;
+    margin-bottom: 1.7rem;
+}
+.card-btn{
+    width: 9rem;
+    border-radius: 5px;
+    padding: 12px 10px;
+    margin-bottom: 1rem;
+    outline: none;
+    border: 1px solid white;
+    cursor: pointer;
+    background-color: #000;
+}
+.card-btn a{
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: white;
+}
+.card-btn:hover{
+    background-color: rgba(20, 167, 7, 0.835);
+    border: none;
+    cursor: pointer;
+}
+.card-btn:active{
+    transform: translateY(1.1rem);
+    transition: 1s ease;
+}
+/* Style the buttons that are used to open and close the accordion panel */
+/*///////////////////////////////////////////////////////////////////////*/
+.accordion {
+    background-color: rgb(255, 246, 246);
+    color: rgb(49, 48, 48);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 420;
+    outline: none;
+    transition: 0.4s;
+}
+.active, .accordion:hover {
+    background-color: green;
+    color: white;
+}
+.panel {
+    padding: 20px;
+    display: none;
+    background-color: #eee;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.panel p{
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    line-height: 20px;
+}
+.accordion:after {
+    content: '\02795';
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+.active:after {
+    content: "\2796";
+}
+/*////////////////////////////////*/
+/*///////////////////////////////*/
+.skills{
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    flex-grow: 1;
+    background-color: var(--bg-color-main);
+}
+.skills h3{
+    font-size: 25px;
+    color: white;
+    font-weight: 520;
+    letter-spacing: 3px;
+    text-align: center;
+    font-family: 'Rowdies', cursive;
+    padding-bottom:3px;
+}
+.solid-3{
+    width: 16%;
+    margin: auto;
+    margin-bottom: 1.5rem;
+}
+.content-items {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid grey;
+}
+.content-items > marquee ul{
+    display: inline-flex;
+}
+marquee > ul ol{
+    display: inline-flex;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    margin: 0 5px;
+    align-items: flex-start;
+}
+.content-items ol{
+    font-size: 12px;
+    color: white;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    font-weight: 410;
+    border: 1px solid grey;
+    outline: none;
+    padding: 12px 20px;
+    align-items: flex-start;
+}
+.content-items ol:hover{
+    background-color: blue;
+    cursor: pointer;
+}
+/*////////////////////////////*/
+/*///////////////////////////*/
+#dj{
+    width: 100%;
+    background-color: var(--bg-color-main);
+    padding-top: 30px;
+}
+#dj h1{
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: white;
+    font-weight: 420;
+    margin-bottom: 12px;
+}
+.dj-blog{
+    width: 100%;
+    padding: 10px 20px 20px 20px;
+    flex-grow: 1;
+}
+.video-box{
+    width: 35%;
+    max-height: 30%;
+    padding: 5px 10px 5px 10px;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 2rem;
+    border: 2px solid rgb(13, 130, 226);
+    flex-grow: 1;
+    object-fit: fill;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px .1px rgb(6, 113, 212);
+}
+.video-box video{
+    width: 100%;
+    object-fit: fill;
+    max-height: 550px;
+    border-radius: 5px;
+}
+.blog-card{
+    width: 100%;
+    padding: 10px 8px 15px 8px;
+    border-radius: 5px;
+    display: flex;
+    border: 1px solid grey;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    column-gap: 5px;
+    margin-bottom: 15px;
+}
+.blog-card img{
+    min-width: 13.8%;
+    aspect-ratio: 1/ 1;
+    min-height: 200px;
+    transition: .30s ease;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 0 100% 4rem;
+}
+.blog-card:hover > :not(:hover){
+    opacity: .4;
+    transform: scale(0.9);
+    cursor: pointer;
+}
+/*/////////////////////////////////////*/
+/*/////////start of projects//////////*/
+#projects{
+    width: 100%;
+    padding-top: 10px;
+}
+#projects h1{
+    color: black;
+    text-align: center;
+    font-size: 27px;
+    font-family: 'Rowdies', cursive;
+    letter-spacing: 1px;
+    font-weight: 520;
+    margin-bottom: 1rem;
+}
+.project-list{
+    width: 100%;
+    background-color: var(--bg-color-main);
+    padding: 12px 5px 20px 5px;
+    flex-grow: 1;
+}
+.project-list h2{
+    text-align: center;
+    color: white;
+    font-size: 23px;
+    letter-spacing: 1px;
+    font-weight: 400px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.solid-4{
+    color: var(--solid-line);
+    margin-bottom: 1rem;
+}
+.controls{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+.controls button{
+    background-color: darkgreen;
+    outline: none;
+    border: none;
+    border-radius: 3px 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+.controls button:hover{
+    scale: 1.1;
+    background-color: green;
+}
+.controls .icon-item{
+    color: white;
+    font-size: 20px;
+    padding: 3px 8px;
+}
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(7, 32%);
+    overflow-x: scroll;
+    grid-gap: 13px;
+    padding: 10px 2px 20px 2px;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+.website{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid green;
+    background-color: rgb(8, 8, 8);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.website:hover{
+    scale: 1.1rem;
+    box-shadow: 0 5px 10px darkgreen;
+}
+.website img{
+    width: 100%;
+    height: 220px;
+    margin-bottom: 10px;
+}
+.website > .description{
+    margin-bottom: 1rem;
+}
+.website > .description h3{
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-weight: 420;
+    color: var(--text-color);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: .1px solid var(--solid-line);
+}
+.website > .description p{
+    font: 14px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+.description a{
+    font-size: 13px;
+    color: var(--text-color);
+    text-decoration: none;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 25px;
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(8, 105, 16);
+}
+.description a:hover{
+    background-color: rgb(8, 160, 8);
+    cursor: pointer;
+}
+.all-projects{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+/* From Uiverse.io by mrhyddenn */ 
+.all-projects button {
+  position: relative;
+  padding: 13px 25px;
+  border-radius: 7px;
+  border: 1px solid rgb(10, 109, 10);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 420;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+.all-projects button a{
+    text-decoration: none;
+    color: white;
+    font-weight: 420;
+    letter-spacing: 2px;
+}
+.all-projects button:hover {
+  background: rgb(10, 109, 10);
+  box-shadow: 0 0 30px 5px rgba(10, 109, 10);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.all-projects button:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+.all-projects button::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.all-projects button:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+/*///////////////////////////////////////*/
+/*//////////////////////////////////////*/
+#contact{
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: var(--bg-color-main);
+    border-top: .1px solid var(--solid-line);
+}
+#contact h1{
+    color: white;
+    font-size: 25px;
+    font-family: 'Rowdies', cursive;
+    letter-spacing: 1px;
+    font-weight: 420;
+    padding-bottom: 5px;
+    text-align: center;
+}
+.solid-5{
+    width: 15rem;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+.contact-box{
+    width: 85%;
+    flex-grow: 1;
+    margin: auto;
+    display: flex;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px 15px 25px;
+    border: .1px solid var(--solid-line);
+    flex-grow: 1;
+}
+.form-link{
+    width: 60%;
+    background-color: var(--bg-color-main);
+    border-right: 1px solid var(--solid-line);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+form{
+    width: 90%;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 1rem;
+    padding: 12px 20px 13px 15px;
+    background-color: #111;
+}
+form .input-group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+form label{
+    color: var(--text-color);
+    margin-block: 12px;
+    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: 400;
+}
+form .input-group > input, textarea{
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: var(--text-color);
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border: .1px solid var(--solid-line);
+}
+form input:focus, textarea:focus{
+    border-color: green;
+}
+form input::placeholder, textarea::placeholder{
+    color: rgba(255, 255, 255, 0.678);
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+.form-img img{
+    height: 550px;
+    width: 100%;
+}
+.submit-btn{
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 5px;
+    background-color: rgb(6, 119, 16);
+    cursor: pointer;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 420;
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+.submit-btn:active{
+    transform: translateY(1.1rem);
+    transition: .1s ease;
+    cursor: pointer;
+}
+.submit-btn:hover{
+    background-color: rgb(7, 156, 22);
+}
+form p{
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: var(--text-color);
+    font-weight: 400;
+}
+/*///////////////////////////////////*/
+/*//////////////////////////////////*/
+#footer{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: var(--bg-color-main);
+    background-image: linear-gradient(to bottom,rgba(16, 31, 18, 0.651),
+    rgba(0, 0, 0, 0.884)),url(../images/events_img10.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#footer h1{
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: white;
+    font-weight: 520;
+    font-family: 'Rowdies', cursive;
+    padding-bottom: 5px;
+}
+.solid-6{
+    width: 15rem;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+.footer-list{
+    width: 100%;
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px 5px 10px 5px;
+}
+.footer-card{
+    width: 100%;
+    text-align: center;
+    align-items: flex-start;
+}
+.footer-card h2{
+    color: var(--text-color);
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    font-weight: 420px;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--solid-line);
+    padding: 5px;
+}
+.footer-card ul li{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    align-self: start;
+    align-items: flex-start;
+    padding-bottom: 14px;
+}
+.footer-card li > a{
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--text-color);
+    font-weight: 420;
+    letter-spacing: 1.5px;
+    text-align: left;
+}
+.footer-card ul li:hover,.footer-card li > a:hover{
+    color: yellow;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.footer-card ul ion-icon{
+    width: 15px;
+    height: 15px;
+
+}
+.footer-card .platforms{
+    display: inline-flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+.footer-card .platforms li a{
+    padding: 0 10px;
+}
+.footer-card .platforms li a ion-icon{
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 30px;
+    margin-bottom: 5px;
+    padding: 5px 5px;
+    flex-grow: 1;
+}
+/*//////////////////////////////////////*/
+/*//////////////////////////////////////*/
+.rights{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--bg-color-main);
+}
+.rights h1{
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: white;
+    text-align: center;
+    font-weight: 420;
+}
+.rights a ion-icon{
+    text-decoration: none;
+    width: 27px;
+    height: 30px;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    line-height: 50px;
+    background-color: green;
+}
+.rights a ion-icon:hover{
+    background-color: darkgreen;
+    transform: translateY(1.1);
+    scale: 1.1rem;
+    cursor: pointer;
+}
+/*//////////////////////////////////////////////*/
+/*////////// Start of responsive-view /////////*/
+@media screen and (max-width: 1200px) and (min-width: 645px){
+    header{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 13px;
+        position: sticky;
+        top: 0;
+    }
+    header .logo{
+        width: 73px;
+        height: 70px;
+    }
+    header .nav-list ul li a{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        text-transform: uppercase;
+        padding: 10px 20px;
+    }
+    header .nav-list .home{
+        margin-right: 5px;
+    }
+    .buttons button{
+        width: 8rem;
+        padding: 11px 10px;
+        border-radius: 5px;
+    }
+    .buttons .youtube-btn a{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 520;
+    }
+    /*///////////////////////////////*/
+    /*//////////////////////////////*/
+    #main{
+        width: 100%;
+        min-height: 82vh;
+        background-color: var(--bg-color-main);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-content{
+        display: grid;
+        grid-template-columns: 55% 1fr;
+        grid-gap: 30px;
+        place-items: center;
+        align-items: center;
+        padding: 0px 20px 15px 20px;
+        flex-grow: 1;
+    }
+    .text-box{
+        padding: 10px;
+        width: 100%;
+        align-items: flex-start;
+    }
+    .text-box h1{
+        font-size: 14px;
+        letter-spacing: 2px;
+        font-size: 400;
+        padding-bottom: 4px;
+    }
+    .text-box h2{
+        font-size: 40px;
+        letter-spacing: 2px;
+        font-weight: 420;
+        font-family: 'Rowdies', cursive;
+        color: white;
+        animation: anim 2s;
+        padding-bottom: 4px;
+    }
+    .text-box bold{
+        color: rgb(14, 156, 14);
+        font-family: 'Rowdies', cursive;
+        font-weight: 520;
+        animation: anim 2s;
+        font-size: 42px;
+    }
+    .text-box h3{
+        color: white;
+        font-family: 'Rowdies', cursive;
+        font-size: 42px;
+        letter-spacing: 2px;
+        font-weight: 400;
+        animation: anim 2s .5s backwards;
+        margin-bottom: 1rem;
+    }
+    .text-box .input{
+        color: rgb(14, 156, 14);
+        font-weight: 520;
+        font-family: 'Rowdies', cursive;
+        font-size: 44px;
+        animation: anim 2s .5s backwards;
+    }
+    .text-box p{
+        max-width: 570px;
+        font-size: 13px;
+        color: white;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-align: justify;
+        line-height: 27px;
+        animation: anim 1s .1s backwards;
+        margin-bottom: 2rem;
+    }
+    .socials-apps{
+        display: inline-flex;
+    }
+    .socials-apps a{
+        animation: anim 1s .1s backwards;
+        margin: 0 25px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        width: 47px;
+        height: 47px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        transition: 0.5s;
+        font-size: 2.4em;
+        transition: .3s ease-in-out;
+        -webkit-box-reflect:below 5px linear-gradient(to bottom, rgba(0, 0, 0, 0.0)
+        ,rgba(0, 0, 0, 0.2));
+        margin-bottom: 10px;
+    }
+    /*//////////////////////////////////////*/
+    /*/////////////////////////////////////*/
+    #about h1{
+        text-align: center;
+        font-size: 27px;
+        padding-bottom: 3px;
+        font-family: 'Rowdies', cursive;
+        letter-spacing: 1px;
+        color:var(--text-color);
+        font-weight: 400;
+    }
+    .solid-1{
+        width: 16%;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+    .about-container{
+        display: grid;
+        grid-template-columns: 1fr 60%;
+        place-items: center;
+        align-items: center;
+        flex-grow: 1;
+        padding: 0px 30px 20px 30px;
+        grid-gap: 5px;
+    }
+    .about-img{
+        width: 90%;
+        min-height: 250px;
+    }
+    .about-img img{
+        width: 100%;
+        border-radius: 10px;
+        box-shadow:0  2px 4px 0 rgb(22, 255, 22);
+    }
+    .about-box{
+        padding: 12px;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .about-box h2{
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        letter-spacing: 1px;
+        font-weight: 520;
+        border-bottom: 1px solid white;
+        padding-bottom: 3px;
+        margin-bottom: 1.5rem;
+    }
+    .about-box p{
+        font-size: 13px;
+        letter-spacing: 1px;
+        color: white;
+        text-align: justify;
+        font-weight: 400;
+        line-height: 26px;
+        margin-bottom: 1.5rem;
+        align-self: start;
+    }
+    .cssbuttons-io-button {
+      background-color: green;
+      color: white;
+      font-family: inherit;
+      padding: 0.37em;
+      padding-left: 1.2em;
+      font-size: 15px;
+      font-weight: 450;
+      border-radius: 10px;
+      border: none;
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      box-shadow: inset 0 0 1.6em -0.5em #fff;
+      overflow: hidden;
+      position: relative;
+      height: 2.9em;
+      width: 12rem;
+      padding-right: 3.3em;
+      cursor: pointer;
+    }
+    .cssbuttons-io-button .icon {
+      background: white;
+      margin-left: 1em;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 2.4em;
+      width: 2.4em;
+      border-radius: 0.7em;
+      box-shadow: 0.1em 0.1em 0.4em 0.2em ghostwhite;
+      right: 0.3em;
+      transition: all 0.3s;
+    }
+    .cssbuttons-io-button:hover .icon {
+      width: calc(100% - 0.6em);
+    }
+
+    .cssbuttons-io-button .icon svg {
+      width: 1.5em;
+      transition: transform 0.3s;
+      color: green;
+    }
+    /*///////////////////////////*/
+    /*//////////////////////////*/
+    #services{
+        width: 100%;
+        padding-top: 30px;
+        border-top: .1px solid var(--solid-line);
+        background-color: var(--bg-color-main);
+    }
+    #services h1{
+        font-size: 24px;
+        letter-spacing: 3px;
+        font-weight: 520;
+    }
+    .solid-2{
+        width: 15%;
+        margin:auto;
+        margin-bottom: 2.5rem;
+    }
+    .services-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 45px;
+        padding: 10px 25px 10px 25px;
+        margin-bottom: 3rem;
+        flex-grow: 1;
+        flex-wrap: wrap;
+    }
+    .services-container .card{
+        padding: 11px;
+        border: 1px solid rgba(255, 255, 255, 0.486);
+        border-radius: 5px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .services-container .card:hover{
+        background-color: #111111;
+        box-shadow: 0 5px 10px green;
+        cursor: pointer;
+        transition: .2s ease-in-out;
+    }
+    .services-container .card h2{
+        text-align: center;
+        font-size: 22px;
+        padding-top: 5px;
+        letter-spacing: 1px;
+        font-weight: 520;
+        color: white;
+        border-bottom: 1px solid white;
+        margin-bottom: 15px;
+    }
+    .services-container .card > img{
+        margin-bottom: 12px;
+        width: 50%;
+        margin-bottom: 14px;
+        height: 200px;
+    }
+    .services-container .card p{
+        font-size: 13px;
+        color: white;
+        text-align: center;
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 22px;
+        margin-bottom: 1.7rem;
+    }
+    .card-btn{
+        width: 9rem;
+        border-radius: 5px;
+        padding: 12px 10px;
+        margin-bottom: 1rem;
+        outline: none;
+        border: 1px solid white;
+        cursor: pointer;
+        background-color: #000;
+    }
+    .card-btn a{
+        text-decoration: none;
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        color: white;
+    }
+    .card-btn:hover{
+        background-color: rgba(20, 167, 7, 0.835);
+        border: none;
+        cursor: pointer;
+    }
+    .card-btn:active{
+        transform: translateY(1.1rem);
+        transition: 1s ease;
+    }
+    /*////////////////////////////*/
+    /*///////////////////////////*/
+    .dj-blog{
+        width: 100%;
+        padding: 10px 10px 20px 10px;
+        flex-grow: 1;
+    }
+    .blog-card{
+        width: 100%;
+        padding: 10px 5px 10px 5px;
+        border-radius: 5px;
+        display: flex;
+        border: 1px solid grey;
+        flex-grow: 1;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        column-gap: 4px;
+        margin-bottom: 15px;
+    }
+    .blog-card img{
+        min-width: 13.9%;
+        aspect-ratio: 1/ 1;
+        min-height: 190px;
+        transition: .30s ease;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    /*/////////////////////////////////////*/
+    /*/////////start of projects//////////*/
+    #projects{
+        width: 100%;
+        padding-top: 10px;
+    }
+    #projects h1{
+        color: black;
+        text-align: center;
+        font-size: 27px;
+        font-family: 'Rowdies', cursive;
+        letter-spacing: 1px;
+        font-weight: 520;
+        margin-bottom: 1rem;
+    }
+    .project-list{
+        width: 100%;
+        background-color: var(--bg-color-main);
+        padding: 12px 5px 20px 5px;
+        flex-grow: 1;
+    }
+    .project-list h2{
+        text-align: center;
+        color: white;
+        font-size: 22px;
+        letter-spacing: 1px;
+        font-weight: 400px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .solid-4{
+        color: var(--solid-line);
+        margin-bottom: 1rem;
+    }
+    .controls{
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+    }
+    .controls button{
+        background-color: darkgreen;
+        outline: none;
+        border: none;
+        border-radius: 3px 5px;
+        cursor: pointer;
+        margin: 0 8px;
+    }
+    .controls .icon-item{
+        color: white;
+        font-size: 20px;
+        padding: 3px 8px;
+    }
+    .project-container{
+        display: grid;
+        /*grid-template-columns: repeat(7, 34%);*/
+        grid-template-columns: repeat(7, 400px);
+        overflow-x: scroll;
+        grid-gap: 12px;
+        padding: 10px 2px 25px 2px;
+        margin-bottom: 2.1rem;
+        flex-grow: 1;
+    }
+    .website{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        border: 1px solid green;
+        background-color: rgb(8, 8, 8);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .website:hover{
+        scale: 1.1rem;
+        box-shadow: 0 5px 10px darkgreen;
+    }
+    .website img{
+        width: 100%;
+        height: 220px;
+        margin-bottom: 10px;
+    }
+    .website > .description{
+        margin-bottom: 1rem;
+    }
+    .website > .description h3{
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        color: var(--text-color);
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+        border-bottom: .1px solid var(--solid-line);
+    }
+    .website > .description p{
+        font: 14px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        line-height: 20px;
+        color: var(--text-color);
+        margin-bottom: 20px;
+    }
+    .description a{
+        font-size: 13px;
+        color: var(--text-color);
+        text-decoration: none;
+        letter-spacing: 1px;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        outline: none;
+        cursor: pointer;
+        background-color: rgb(8, 105, 16);
+    }
+    .all-projects button {
+      position: relative;
+      padding: 13px 27px;
+      border-radius: 7px;
+      border: 1px solid rgb(10, 109, 10);
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 420;
+      letter-spacing: 1.2px;
+      background: transparent;
+      color: #fff;
+      overflow: hidden;
+      box-shadow: 0 0 0 0 transparent;
+      -webkit-transition: all 0.2s ease-in;
+      -moz-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+      cursor: pointer;
+    }
+    /*///////////////////////////////////////*/
+    /*//////////////////////////////////////*/
+    #contact{
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: var(--bg-color-main);
+        border-top: .1px solid var(--solid-line);
+    }
+    #contact h1{
+        color: white;
+        font-size: 23px;
+        font-family: 'Rowdies', cursive;
+        letter-spacing: 1px;
+        font-weight: 420;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+    .solid-5{
+        width: 13rem;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+    /*///////////////////////////////////*/
+    /*//////////////////////////////////*/
+    #footer{
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        background-color: var(--bg-color-main);
+        background-image: linear-gradient(to bottom,rgba(16, 31, 18, 0.651),
+        rgba(0, 0, 0, 0.884)),url(../images/events_img10.jpg);
+    }
+    #footer h1{
+        text-align: center;
+        font-size: 23px;
+        letter-spacing: 1.5px;
+        color: white;
+        font-weight: 520;
+        font-family: 'Rowdies', cursive;
+        padding-bottom: 5px;
+    }
+    .solid-6{
+        width: 13rem;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .footer-list{
+        width: 100%;
+        display: grid;
+        align-items: flex-start;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 10px 5px 10px 5px;
+        flex-grow: 1;
+    }
+    .footer-card{
+        width: 100%;
+        text-align: center;
+        align-items: flex-start;
+    }
+    .footer-card h2{
+        color: var(--text-color);
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 420px;
+        margin-bottom: 1.5rem;
+        border: 1px solid var(--solid-line);
+        padding: 5px;
+    }
+    .footer-card ul li{
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        align-self: start;
+        align-items: flex-start;
+        padding-bottom: 14px;
+    }
+    .footer-card li > a{
+        text-decoration: none;
+        font-size: 14px;
+        color: var(--text-color);
+        font-weight: 420;
+        letter-spacing: 1px;
+        text-align: left;
+    }
+    .footer-card ul ion-icon{
+        width: 14px;
+        height: 13px;
+    }
+    .footer-card .platforms{
+        display: inline-flex;
+        flex-grow: 1;
+        flex-wrap: wrap;
+    }
+    .footer-card .platforms li a{
+        padding: 0 8px;
+    }
+    .footer-card .platforms li a ion-icon{
+        width: 23px;
+        height: 23px;
+        background-color: #fff;
+        border-radius: 30px;
+        margin-bottom: 5px;
+        padding: 5px 5px;
+        flex-grow: 1;
+    }
+    /*//////////////////////////////////////*/
+    /*//////////////////////////////////////*/
+    .rights{
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        background-color: var(--bg-color-main);
+    }
+    .rights h1{
+        font-size: 14px;
+        letter-spacing: 1px;
+        color: white;
+        text-align: center;
+        font-weight: 420;
+    }
+    .rights a ion-icon{
+        text-decoration: none;
+        width: 27px;
+        height: 30px;
+        color: white;
+        padding: 5px 5px;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 30px;
+        right: 20px;
+        line-height: 50px;
+        background-color: green;
+    }
+    .rights a ion-icon:hover{
+        background-color: darkgreen;
+        transform: translateY(1.1);
+        cursor: pointer;
+        scale: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 1068px) and (min-width: 645px){
+    header .logo{
+        width: 70px;
+        height: 65px;
+    }
+    header .nav-list ul li a{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        text-transform: uppercase;
+        padding: 10px 15px;
+    }
+    header .nav-list .home{
+        margin-right: 5px;
+    }
+    .dropdown{
+        border-radius: 0.5rem;
+        background: var(--gray);
+        display: none;
+        padding: 0.4rem;
+        width: 100%;
+        max-width: 75rem;
+        border: 1px solid var(--white);
+        box-shadow: 0 50px 100px -20px rgba(0,0,0,.12), 0 30px 60px -30px rgba(0,0,0, .15);
+        z-index: 2;
+        animation: fadein 0.2s ease-in-out;
+    }
+    .list-items-with-description{
+        list-style-type: none;
+        display: grid;
+        width: 100%;
+        flex-grow: 1;
+        align-items: flex-start;
+        text-align: left;
+        grid-template-columns: repeat(2, 200px);
+    }
+    .list-items-with-description li{
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+        padding: 0.3rem;
+        gap: 12px;
+        width: 100%;
+        transition: all 0.2s ease-in-out;
+        border-radius: 0.375rem;
+    }
+    .list-items-with-description li:hover{
+        background: var(--secondary-background);
+    }
+    .list-items-with-description li ion-icon{
+        stroke: var(--link-gray-hover);
+        width: 1rem;
+        height: 1rem;
+        display: none;
+    }
+    .item-title h3{
+        font-weight: 520;
+        letter-spacing: .1px;
+        font-size: 12px;
+        margin-bottom: 7px;
+        color:black;
+    }
+    .item-title p{
+        font-size: 0.6rem;
+        white-space: nowrap;
+        color: gray;
+        font-weight: 400;
+    }
+    .buttons button{
+        width: 8rem;
+        padding: 10px 10px;
+        border-radius: 5px;
+    }
+    .buttons .youtube-btn a{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 450;
+    }
+
+    .main-content{
+        display: grid;
+        grid-template-columns: 57% 1fr;
+        grid-gap: 20px;
+        place-items: center;
+        align-items: center;
+        padding: 0px 20px 15px 20px;
+        flex-grow: 1;
+    }
+    .text-box{
+        padding: 10px;
+        width: 100%;
+        align-items: flex-start;
+    }
+    .text-box h1{
+        font-size: 14px;
+        letter-spacing: 2px;
+        font-size: 400;
+        padding-bottom: 4px;
+    }
+    .text-box h2{
+        font-size: 38px;
+        letter-spacing: 1.5px;
+        font-weight: 420;
+        font-family: 'Rowdies', cursive;
+        color: white;
+        animation: anim 2s;
+        padding-bottom: 3px;
+    }
+    .text-box bold{
+        color: rgb(14, 156, 14);
+        font-family: 'Rowdies', cursive;
+        font-weight: 520;
+        animation: anim 2s;
+        font-size: 40px;
+    }
+    .text-box h3{
+        color: white;
+        font-family: 'Rowdies', cursive;
+        font-size: 40px;
+        letter-spacing: 1.5px;
+        font-weight: 400;
+        animation: anim 2s .5s backwards;
+        margin-bottom: 1rem;
+    }
+    .text-box .input{
+        color: rgb(14, 156, 14);
+        font-weight: 520;
+        font-family: 'Rowdies', cursive;
+        font-size: 42px;
+        animation: anim 2s .5s backwards;
+    }
+    .text-box p{
+        max-width: 560px;
+        font-size: 13px;
+        color: white;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-align: justify;
+        line-height: 26px;
+        animation: anim 1s .1s backwards;
+        margin-bottom: 2rem;
+    }
+    .socials-apps{
+        display: inline-flex;
+    }
+    .socials-apps a{
+        animation: anim 1s .1s backwards;
+        margin: 0 23px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        transition: 0.5s;
+        font-size: 2.4em;
+        transition: .3s ease-in-out;
+        -webkit-box-reflect:below 5px linear-gradient(to bottom, rgba(0, 0, 0, 0.0)
+        ,rgba(0, 0, 0, 0.2));
+        margin-bottom: 10px;
+    }
+    .banner-view img{
+        width: 100%;
+    }
+    /*//////////////////////////////////////*/
+    /*/////////////////////////////////////*/
+    #about{
+        width: 100%;
+        padding-top: 20px;
+    }
+     #about h1{
+        font-size: 25px;
+        padding-bottom: 3px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+    .solid-1{
+        width: 16%;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+    .about-container{
+        display: grid;
+        grid-template-columns: 1fr 57%;
+        place-items: center;
+        align-items: center;
+        flex-grow: 1;
+        padding: 0px 20px 20px 25px;
+        grid-gap: 5px;
+    }
+    .about-img{
+        width: 95%;
+        min-height: 230px;
+    }
+    .about-img img{
+        width: 100%;
+        border-radius: 10px;
+        box-shadow:0  2px 4px 0 rgb(22, 255, 22);
+    }
+    .about-box{
+        padding: 10px;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .about-box h2{
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        letter-spacing: .1px;
+        font-weight: 520;
+        border-bottom: 1px solid white;
+        padding-bottom: 3px;
+        margin-bottom: 1.3rem;
+    }
+    .about-box p{
+        font-size: 13px;
+        letter-spacing: 1px;
+        color: white;
+        text-align: justify;
+        font-weight: 400;
+        line-height: 25px;
+        margin-bottom: 1.5rem;
+        align-self: start;
+    }
+    .services-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        padding: 10px 25px 10px 25px;
+        margin-bottom: 3rem;
+        flex-grow: 1;
+        flex-wrap: wrap;
+    }
+    .services-container .card:hover{
+        /*background-color: rgba(2, 44, 2, 0.746);
+        background-color: #222222;*/
+        background-color: #111111;
+        box-shadow: 0 5px 10px green;
+        cursor: pointer;
+        transition: .2s ease-in-out;
+    }
+    /*////////////////////////////*/
+    /*///////////////////////////*/
+    .dj-blog{
+        width: 100%;
+        padding: 10px 5px 20px 5px;
+        flex-grow: 1;
+    }
+    .blog-card{
+        width: 100%;
+        padding: 10px 5px 10px 5px;
+        border-radius: 5px;
+        display: flex;
+        border: 1px solid grey;
+        flex-grow: 1;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        column-gap: 4px;
+        margin-bottom: 15px;
+    }
+    .blog-card img{
+        min-width: 13%;
+        aspect-ratio: 1/ 1;
+        min-height: 160px;
+        transition: .30s ease;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #projects h1{
+        color: black;
+        text-align: center;
+        font-size: 25px;
+        font-family: 'Rowdies', cursive;
+        letter-spacing: 1px;
+        font-weight: 520;
+        margin-bottom: 1rem;
+    }
+    .project-list{
+        width: 100%;
+        background-color: var(--bg-color-main);
+        padding: 12px 5px 20px 5px;
+        flex-grow: 1;
+    }
+    .project-list h2{
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        letter-spacing: 1px;
+        font-weight: 400px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .controls button{
+        background-color: darkgreen;
+        outline: none;
+        border: none;
+        border-radius: 3px 5px;
+        cursor: pointer;
+        margin: 0 5px;
+    }
+    .controls .icon-item{
+        color: white;
+        font-size: 18px;
+        padding: 3px 8px;
+    }
+    .project-container{
+        display: grid;
+        grid-template-columns: repeat(7, 380px);
+        overflow-x: scroll;
+        grid-gap: 12px;
+        padding: 10px 2px 25px 2px;
+        margin-bottom: 2rem;
+        flex-grow: 1;
+    }
+
+    .contact-box{
+        width: 97%;
+        flex-grow: 1;
+        margin: auto;
+        display: flex;
+        border-radius: 5px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 25px 15px 25px;
+        border: .1px solid var(--solid-line);
+        flex-grow: 1;
+    }
+    .form-link{
+        width: 60%;
+        background-color: var(--bg-color-main);
+        border-right: 1px solid var(--solid-line);
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    form{
+        width: 95%;
+        margin: auto;
+        border-radius: 5px;
+        margin-top: 1rem;
+        padding: 12px 20px 13px 15px;
+        background-color: #111;
+    }
+    form .input-group{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    form label{
+        color: var(--text-color);
+        margin-block: 12px;
+        letter-spacing: 1px;
+        font-size: 13px;
+        font-weight: 400;
+    }
+    form .input-group > input, textarea{
+        width: 100%;
+        padding: 12px 10px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        color: var(--text-color);
+        border-radius: 4px;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        border: .1px solid var(--solid-line);
+    }
+    form input::placeholder, textarea::placeholder{
+        color: rgba(255, 255, 255, 0.678);
+        font-size: 14px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+    .form-img img{
+        height: 500px;
+        width: 100%;
+    }
+    .submit-btn{
+        width: 100%;
+        padding: 12px 10px;
+        border-radius: 5px;
+        background-color: rgb(6, 119, 16);
+        cursor: pointer;
+        font-size: 15px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        color: var(--text-color);
+        border: none;
+        outline: none;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .footer-card .platforms li a{
+        padding: 0 6px;
+    }
+    .footer-card .platforms li a ion-icon{
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 30px;
+        margin-bottom: 5px;
+        padding: 5px 5px;
+        flex-grow: 1;
+    }
+}
+
+@media screen and (max-width: 965px) and (min-width: 645px) {
+    #main{
+        width: 100%;
+        min-height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-content{
+        display: grid;
+        grid-template-columns: 56% 1fr;
+        grid-gap: 15px;
+        padding: 0px 15px 15px 15px;
+        flex-grow: 1;
+    }
+    .text-box{
+        padding: 10px;
+        width: 100%;
+        align-items: flex-start;
+    }
+    .text-box h1{
+        font-size: 14px;
+        letter-spacing: 1px;
+        font-size: 400;
+        padding-bottom: 2.5px;
+    }
+    .text-box h2{
+        font-size: 33px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        animation: anim 2s;
+        padding-bottom: 2px;
+    }
+    .text-box bold{
+        font-weight: 520;
+        animation: anim 2s;
+        font-size: 35px;
+    }
+    .text-box h3{
+        font-size: 35px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        animation: anim 2s .5s backwards;
+        margin-bottom: 1rem;
+    }
+    .text-box .input{
+        font-weight: 520;
+        font-size: 35px;
+        animation: anim 2s .5s backwards;
+    }
+    .text-box p{
+        max-width: 550px;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-align: justify;
+        line-height: 25px;
+        animation: anim 1s .1s backwards;
+        margin-bottom: 2rem;
+    }
+    .socials-apps a{
+        animation: anim 1s .1s backwards;
+        margin: 0 20px;
+        width: 43px;
+        height: 43px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+        font-size: 2.4em;
+        transition: .3s ease-in-out;
+        -webkit-box-reflect:below 5px linear-gradient(to bottom, rgba(0, 0, 0, 0.0)
+        ,rgba(0, 0, 0, 0.2));
+        margin-bottom: 10px;
+    }
+    .banner-view img{
+        width: 95%;
+        margin: 25px 0;
+    }
+    /*//////////////////////////////////////*/
+    /*/////////////////////////////////////*/
+    #about{
+        width: 100%;
+        padding-top: 20px;
+    }
+    #about h1{
+        font-size: 23px;
+        padding-bottom: 3px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+    .solid-1{
+        width: 16%;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .about-container{
+        display: grid;
+        grid-template-columns: 1fr 60%;
+        flex-grow: 1;
+        padding: 0px 10px 20px 10px;
+        grid-gap: 5px;
+    }
+    .about-img{
+        width: 95%;
+        min-height: 200px;
+    }
+    .about-img img{
+        width: 95%;
+        border-radius: 10px;
+        box-shadow:0  2px 4px 0 rgb(22, 255, 22);
+    }
+    .about-box{
+        padding: 8px;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .about-box h2{
+        font-size: 18px;
+        letter-spacing: .1px;
+        font-weight: 450;
+        border-bottom: 1px solid white;
+        padding-bottom: 3px;
+        margin-bottom: 1.3rem;
+    }
+    .about-box p{
+        font-size: 13px;
+        letter-spacing: .1px;
+        color: white;
+        text-align: justify;
+        font-weight: 400;
+        line-height: 25px;
+        margin-bottom: 1.5rem;
+        align-self: start;
+    }
+    /*///////////////////////////*/
+    /*//////////////////////////*/
+    #services{
+        width: 100%;
+        padding-top: 20px;
+    }
+    #services h1{
+        font-size: 22px;
+        letter-spacing: 2px;
+        font-weight: 520;
+    }
+    .solid-2{
+        width: 16%;
+        margin:auto;
+        margin-bottom: 2rem;
+    }
+    .services-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        padding: 10px 20px 10px 20px;
+        margin-bottom: 3rem;
+        flex-grow: 1;
+        flex-wrap: wrap;
+    }
+    .services-container .card{
+        padding: 10px;
+    }
+    .services-container .card h2{
+        font-size: 20px;
+        letter-spacing: 1px;
+        font-weight: 450;
+        margin-bottom: 15px;
+    }
+    .services-container .card > img{
+        width: 60%;
+        margin-bottom: 14px;
+        height: 200px;
+    }
+    .services-container .card p{
+        font-size: 13px;
+        color: white;
+        font-weight: 400;
+        letter-spacing: .1px;
+        line-height: 23px;
+        margin-bottom: 1.7rem;
+    }
+    .accordion {
+        padding: 18px;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        letter-spacing: 1px;
+        font-weight: 450;
+        transition: 0.4s;
+      }
+    .panel {
+        padding: 20px;
+    }
+    .panel p{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+    /*/////////////////////////*/
+    /*////////////////////////*/
+    .project-list h2{
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        letter-spacing: 1px;
+        font-weight: 400px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .controls button{
+        margin: 0 5px;
+    }
+    .controls .icon-item{
+        color: white;
+        font-size: 15px;
+        padding: 3px 5px;
+    }
+    .project-container{
+        display: grid;
+        grid-template-columns: repeat(7, 350px);
+        overflow-x: scroll;
+        grid-gap: 10px;
+        padding: 10px 2px 25px 2px;
+        margin-bottom: 2rem;
+        flex-grow: 1;
+    }
+    .website > .description h3{
+        font-size: 15px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+    .website > .description p{
+        font: 13px;
+        letter-spacing: .1px;
+        font-weight: 400;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+    .description a{
+        font-size: 13px;
+        letter-spacing: 1px;
+        border-radius: 5px;
+        padding: 10px 15px;
+    }
+   .footer-card .platforms li a ion-icon{
+        width: 23px;
+        height: 23px;
+        background-color: #fff;
+        border-radius: 30px;
+        margin-bottom: 5px;
+        padding: 5px 5px;
+        flex-grow: 1;
+    }
+}
+@media screen and (max-width: 844px) and (min-width: 645px){
+    .checkbtn{
+        display: block;
+        float: right;
+        color: white;
+        transition: .2s ease-in-out;
+    }
+    .checkbtn ion-icon{
+        font-size: 50px;
+        width: 40px;
+        height: 40px;
+        color:white;
+        border: 1px solid black;
+        border-radius: .5rem;
+        padding: .1rem 1.2rem;
+        cursor: pointer;
+        transition: .2s ease-in-out;
+    }
+    .youtube-btn{
+        display: none;
+    }
+    header{
+        width: 100%;
+        display: flex;
+        scroll-behavior: smooth;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+        padding: 15px 30px 15px 30px;
+        transition: all .2s ease-in-out;
+    }
+    header .logo-img{
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        border: 2px solid green;
+        cursor: pointer;
+    }
+    header label{
+        display: initial;
+    }
+    header .navigation{
+        padding: 3px;
+    }
+    header .nav-list{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 500;
+        padding-bottom: 10px;
+        width: 100%;
+        transition: .3s ease-in-out;
+        scroll-behavior: smooth;
+        display: none;
+        background-image:linear-gradient(to bottom,rgba(7, 9, 10, 0.510),
+        rgba(10, 8, 10, 0.90));
+        border-bottom: .1px solid grey;
+        border-right: .1px solid grey;
+        border-top: 1px solid rgba(0,0,0,.1);
+    }
+    header .nav-list ul li{
+        width: 100%;
+        position: relative;
+        padding: 3px;
+        padding-bottom: 5px;
+        margin-left: 0px;
+    }
+    header ul li{
+        display: block;
+        margin-right: none;
+        line-height: 20px;
+        text-align: center;
+        width: 100%;
+    }
+    header .nav-list ul li a{
+        color: white;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 2px;
+        transition: .2s ease-in-out;
+    }
+    header .nav-list .home{
+        background-color: transparent;
+    }
+    header .nav-list ul li a:hover{
+        background-color: transparent;
+        transition: .2s ease-in-out;
+    }
+    .dropdown-wrapper{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin:0 12rem;
+        justify-content: center;
+        margin-top: 10px;
+        z-index: 10;
+    }
+    .dropdown{
+        border-radius: 0.5rem;
+        background: var(--gray);
+        display: none;
+        padding: 0.4rem;
+        width: 100%;
+        max-width: 75rem;
+        border: 1px solid var(--white);
+        box-shadow: 0 50px 100px -20px rgba(0,0,0,.12), 0 30px 60px -30px rgba(0,0,0, .15);
+        z-index: 2;
+        animation: fadein 0.2s ease-in-out;
+        z-index: 10;
+    }
+    .list-items-with-description{
+        list-style-type: none;
+        display: grid;
+        width: 100%;
+        flex-grow: 1;
+        align-items: flex-start;
+        text-align: left;
+        grid-template-columns: repeat(2, 220px);
+        z-index: 10;
+    }
+    .item-title h3{
+        font-weight: 520;
+        letter-spacing: .2px;
+        font-size: 13px;
+        margin-bottom: 3px;
+        color:black;
+    }
+    .item-title p{
+        font-size: 0.6rem;
+        white-space: nowrap;
+        color: gray;
+        font-weight: 400;
+    }
+    #menu-bar:checked ~ .nav-list{
+        display: inline-block;
+    }
+    #main{
+        width: 100%;
+        min-height: 80vh;
+    }
+    .main-content{
+        display: block;
+        grid-template-columns: 1, 1fr;
+        grid-gap: 10px;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px 20px 20px;
+        flex-grow: 1;
+    }
+    .text-box{
+        padding: 10px;
+        width: 100%;
+        margin: auto;
+        align-items: flex-start;
+    }
+    .text-box h1{
+        font-size: 14px;
+        letter-spacing: 1.5px;
+        font-size: 400;
+        padding-bottom: 2.5px;
+    }
+    .text-box h2{
+        font-size: 33px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        animation: anim 2s;
+        padding-bottom: 2px;
+    }
+    .text-box bold{
+        font-weight: 520;
+        animation: anim 2s;
+        font-size: 35px;
+    }
+    .text-box h3{
+        font-size: 35px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        animation: anim 2s .5s backwards;
+        margin-bottom: 1rem;
+    }
+    .text-box .input{
+        font-weight: 520;
+        font-size: 35px;
+        animation: anim 2s .5s backwards;
+    }
+    .text-box p{
+        max-width: 550px;
+        margin: auto;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-align: justify;
+        line-height: 26px;
+        animation: anim 1s .1s backwards;
+        margin-bottom: 2rem;
+    }
+    .socials-apps a{
+        animation: anim 1s .1s backwards;
+        margin: 0 25px;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+        font-size: 2.5em;
+        transition: .3s ease-in-out;
+        -webkit-box-reflect:below 5px linear-gradient(to bottom, rgba(0, 0, 0, 0.0)
+        ,rgba(0, 0, 0, 0.2));
+        margin-bottom: 10px;
+    }
+    .banner-view img{
+        width: 50%;
+        margin: auto;
+        padding-top: 10px;
+    }
+
+    .about-container{
+        display: block;
+        grid-template-columns: 1, 1fr;
+        place-items: center;
+        align-items: center;
+        text-align: center;
+        flex-grow: 1;
+        padding: 10px 20px 20px 20px;
+        grid-gap: 10px;
+    }
+    .about-img img{
+        width: 45%;
+        height: 400px;
+        padding-bottom: 20px;
+        margin: auto;
+    }
+    .about-box{
+        padding: 15px 5px 10px 5px;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 2rem;
+        width: 95%;
+        margin: auto;
+    }
+    .about-box h2{
+        font-size: 18px;
+        letter-spacing: 1.1px;
+        font-weight: 520;
+        margin-bottom: 1.5rem;
+    }
+    .about-box p{
+        font-size: 13px;
+        letter-spacing: 1px;
+        color: white;
+        text-align: justify;
+        font-weight: 400;
+        line-height: 26px;
+        margin-bottom: 1.5rem;
+        align-self: start;
+    }
+    .about-box > .about-btn{
+        align-items: center;
+        place-items: center;
+        justify-content: center;
+    }
+    .cssbuttons-io-button {
+      padding: 0.38em;
+      padding-left: 1.2em;
+      font-size: 15px;
+      font-weight: 450;
+      letter-spacing: 0.07em;
+      display: flex;
+      align-items: center;
+      box-shadow: inset 0 0 1.6em -0.6em #fff;
+      overflow: hidden;
+      position: relative;
+      height: 3.5em;
+      width: 15rem;
+      padding-right: 3.3em;
+    }
+    .cssbuttons-io-button .icon {
+      margin-left: 1em;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 2.5em;
+      width: 3em;
+      box-shadow: 0.1em 0.1em 0.5em 0.2em ghostwhite;
+      right: 0.3em;
+      transition: all 0.3s;
+    }
+
+    .cssbuttons-io-button:hover .icon {
+      width: calc(100% - 0.6em);
+    }
+
+    .cssbuttons-io-button .icon svg {
+      width: 1.4em;
+      transition: transform 0.3s;
+      color: green;
+    }
+
+    .services-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+        padding: 20px 25px 15px 25px;
+        margin-bottom: 2rem;
+        flex-grow: 1;
+    }
+    .services-container .card{
+        padding: 11px;
+        width: 95%;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .services-container .card h2{
+        font-size: 21px;
+        padding-top: 5px;
+        letter-spacing: 1px;
+        font-weight: 520;
+        color: white;
+        padding-bottom: 2px;
+        margin-bottom: 15px;
+    }
+    .services-container .card > img{
+        margin-bottom: 15px;
+        width: 40%;
+        margin: auto;
+        height: 220px;
+    }
+    .services-container .card p{
+        font-size: 13px;
+        text-align: center;
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 23px;
+        margin-bottom: 1.7rem;
+    }
+    .card-btn{
+        width: 10rem;
+        border-radius: 5px;
+        padding: 12px 10px;
+        margin-bottom: 1rem;
+    }
+    .card-btn a{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+    .accordion {
+        padding: 17px;
+        width: 100%;
+        text-align: center;
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 450;
+        transition: 0.4s;
+      }
+    .panel {
+        padding: 17px;
+    }
+    .skills{
+        width: 100%;
+        padding-top: 26px;
+        padding-bottom: 20px;
+    }
+    .skills h3{
+        font-size: 23px;
+        font-weight: 520;
+        letter-spacing: 1.5px;
+        text-align: center;
+    }
+    .solid-3{
+        width: 16%;
+        margin: auto;
+        margin-bottom: 1.5rem;
+    }
+    .content-items ol{
+        font-size: 12px;
+        letter-spacing: 1px;
+        border-radius: 4px;
+        font-weight: 400;
+        padding: 11px 15px;
+        align-items: flex-start;
+    }
+    /*////////////////////////////*/
+    /*///////////////////////////*/
+    #dj{
+        width: 100%;
+        padding-top: 20px;
+    }
+    #dj h1{
+        font-size: 17px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        margin-bottom: 12px;
+    }
+    .dj-blog{
+        width: 100%;
+        padding: 10px 5px 20px 5px;
+        flex-grow: 1;
+    }
+    .video-box{
+        width: 60%;
+        max-height: 30%;
+        padding: 5px 8px 5px 8px;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 2rem;
+        border: 2px solid rgb(13, 130, 226);
+        flex-grow: 1;
+        object-fit: fill;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px .1px rgb(6, 113, 212);
+    }
+    .video-box video{
+        width: 100%;
+        object-fit: fill;
+        max-height: 520px;
+        border-radius: 5px;
+    }
+    .blog-card{
+        width: 100%;
+        padding: 10px 5px 10px 5px;
+        column-gap: 3px;
+        margin-bottom: 15px;
+    }
+    .blog-card img{
+        min-width: 13.5%;
+        aspect-ratio: 1/ 1;
+        min-height: 140px;
+    }
+    .project-list{
+        width: 100%;
+        padding: 12px 1px 20px 1px;
+        flex-grow: 1;
+    }
+    .project-list h2{
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 400px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .controls button{
+        margin: 0 3px;
+    }
+    .controls .icon-item{
+        color: white;
+        font-size: 17px;
+        padding: 3px 7px;
+    }
+    .project-container{
+        display: grid;
+        grid-template-columns: repeat(7, 350px);
+        overflow-x: scroll;
+        grid-gap: 10px;
+        padding: 10px 2px 23px 2px;
+        margin-bottom: 2rem;
+        flex-grow: 1;
+    }
+    .all-projects button {
+      padding: 13px 27px;
+      font-size: 13px;
+      font-weight: 420;
+      letter-spacing: .1px;
+    }
+    /*///////////////////////////////////////*/
+    /*//////////////////////////////////////*/
+    #contact{
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    #contact h1{
+        font-size: 23px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        padding-bottom: 5px;
+    }
+    .solid-5{
+        width: 14rem;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+    .contact-box{
+        width: 90%;
+        flex-grow: 1;
+        margin: auto;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 35px 15px 35px;
+    }
+    .form-link{
+        width: 100%;
+        margin: auto;
+        border-right: none;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    form{
+        width: 95%;
+        margin: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 12px 30px 13px 30px;
+    }
+    form .input-group > input, textarea{
+        width: 100%;
+        padding: 13px 10px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+    .submit-btn{
+        width: 100%;
+        padding: 14px 10px;
+        font-size: 15px;
+        letter-spacing: 1px;
+        font-weight: 520;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .form-img{
+        width: 50%;
+        margin: auto;
+    }
+    .form-img img{
+        height: 450px;
+        width: 100%;
+        display: none;
+        margin: auto;
+    }
+    /*///////////////////////////////////*/
+    /*//////////////////////////////////*/
+    #footer{
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    #footer h1{
+        font-size: 23px;
+        letter-spacing: 1.5px;
+        font-weight: 520;
+        padding-bottom: 5px;
+    }
+    .solid-6{
+        width: 14rem;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .footer-list{
+        width: 100%;
+        display: block;
+        align-items: flex-start;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 15px 25px 10px 25px;
+    }
+    .footer-card{
+        width: 100%;
+        text-align: center;
+        align-items: flex-start;
+    }
+    .footer-card h2{
+        font-size: 20px;
+        letter-spacing: 1.5px;
+        font-weight: 420px;
+        margin-top: 10px;
+        margin-bottom: 1.5rem;
+        padding: 5px;
+    }
+    .footer-card ul li{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        align-self: start;
+        align-items: flex-start;
+        padding-bottom: 13px;
+    }
+    .footer-card li > a{
+        font-size: 15px;
+        letter-spacing: 1px;
+        text-align: left;
+    }
+    .footer-card ul ion-icon{
+        width: 13px;
+        height: 13px;
+    }
+    .footer-card .platforms li a{
+        padding: 0 20px;
+    }
+    .footer-card .platforms li a ion-icon{
+        width: 25px;
+        height: 25px;
+        margin-bottom: 5px;
+        padding: 5px 5px;
+        flex-grow: 1;
+    }
+    .rights h1{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 420;
+    }
+    .rights a ion-icon{
+        width: 35px;
+        height: 33px;
+        padding: 6px 7px;
+        position: fixed;
+        bottom: 30px;
+        right: 10px;
+        line-height: 50px;
+    }
+}
+@media screen and (max-width:768px) and (min-width:645px) {
+    header{
+        width: 100%;
+        display: flex;
+        padding: 10px 20px 12px 20px;
+    }
+    header .logo-img{
+        width: 55px;
+        height: 60px;
+    }
+    header .nav-list .home{
+        background-color: transparent;
+        border: .1px solid var(--solid-line);
+    }
+    header .navigation{
+        padding: 2px;
+    }
+    header .nav-list{
+        position: absolute;
+        top: 100%;
+        z-index: 500;
+        padding-bottom: 10px;
+        width: 100%;
+    }
+    .menu-bar .nav-list ul li{
+        width: 100%;
+        position: relative;
+        padding: 5px;
+        padding-bottom: 5px;
+    }
+    .menu-bar ul li{
+        display: block;
+        line-height: 20px;
+        text-align: left;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .menu-bar .nav-list ul li a{
+        color: white;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 1.5px;
+    }
+    .dropdown-wrapper{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin:0 11rem;
+        justify-content: center;
+        margin-top: 8px;
+        z-index: 10;
+    }
+    .dropdown{
+        border-radius: 0.5rem;
+        background: var(--gray);
+        display: none;
+        padding: 0.3rem;
+        width: 100%;
+        max-width: 75rem;
+        border: 1px solid var(--white);
+        box-shadow: 0 50px 100px -20px rgba(0,0,0,.12), 0 30px 60px -30px rgba(0,0,0, .15);
+        z-index: 2;
+        animation: fadein 0.2s ease-in-out;
+        z-index: 10;
+    }
+    .list-items-with-description{
+        list-style-type: none;
+        display: grid;
+        width: 100%;
+        flex-grow: 1;
+        align-items: flex-start;
+        text-align: left;
+        grid-template-columns: repeat(2, 210px);
+        z-index: 10;
+    }
+    .list-items-with-description li{
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+        padding: 0.3rem;
+        gap: 1rem;
+        width: 100%;
+        transition: all 0.2s ease-in-out;
+        border-radius: 0.375rem;
+    }
+    .item-title h3{
+        font-weight: 520;
+        letter-spacing: .2px;
+        font-size: 13px;
+        margin-bottom: 3px;
+        color:black;
+    }
+    .item-title p{
+        font-size: 0.6rem;
+        white-space: nowrap;
+        color: gray;
+        font-weight: 400;
+    }
+    .controls button{
+        display: none;
+    }
+    .project-container{
+        display: grid;
+        grid-template-columns: repeat(7, 350px);
+        overflow-x: scroll;
+        grid-gap: 10px;
+        padding: 10px 12px 20px 12px;
+        margin-bottom: 1.5rem;
+    }
+    .all-projects button {
+      padding: 14px 25px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+    .footer-card ul ion-icon{
+        width: 11px;
+        height: 11px;
+    }
+    .footer-card .platforms li a{
+        padding: 0 20px;
+    }
+    .footer-card .platforms li a ion-icon{
+        width: 23px;
+        height: 23px;
+        margin-bottom: 5px;
+        padding: 5px 5px;
+        flex-grow: 1;
+    }
+    .rights h1{
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+    .rights a ion-icon{
+        width: 35px;
+        height: 33px;
+        padding: 6px 7px;
+        position: fixed;
+        bottom: 30px;
+        right: 10px;
+        line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 644px) {
+    .checkbtn{
+        display: block;
+        float: right;
+        color: white;
+        transition: .2s ease-in-out;
+    }
+    .checkbtn ion-icon{
+        font-size: 50px;
+        width: 45px;
+        height: 45px;
+        color:white;
+        border: 1px solid black;
+        border-radius: .5rem;
+        padding: .1rem 1.2rem;
+        cursor: pointer;
+        transition: .2s ease-in-out;
+    }
+    .youtube-btn{
+        display: none;
+    }
+    header{
+        width: 100%;
+        display: flex;
+        scroll-behavior: smooth;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+        padding: 14px 20px 13px 20px;
+        transition: all .2s ease-in-out;
+    }
+    header .logo-img{
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        border: 2px solid green;
+        cursor: pointer;
+    }
+    header label{
+        display: initial;
+    }
+    header .nav-list .home{
+        background-color: transparent;
+    }
+    header .navigation{
+        padding: 3px;
+    }
+    header .nav-list{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 500;
+        padding-bottom: 10px;
+        width: 100%;
+        transition: .3s ease-in-out;
+        scroll-behavior: smooth;
+        display: none;
+        background-image:linear-gradient(to bottom,rgba(7, 9, 10, 0.510),
+        rgba(10, 8, 10, 0.90));
+        border-bottom: .1px solid grey;
+        border-right: .1px solid grey;
+        border-top: 1px solid rgba(0,0,0,.1);
+    }
+    header .nav-list ul li{
+        width: 100%;
+        position: relative;
+        padding: 3px;
+        padding-bottom: 5px;
+    }
+    header ul li{
+        display: block;
+        margin-right: 0px;
+        margin-left: 0px;
+        line-height: 18px;
+        text-align: left;
+        align-items: flex-start;
+        width: 100%;
+    }
+    header .nav-list ul li a{
+        color: white;
+        font-weight: 500;
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+    header .nav-list ul li a:hover{
+        background-color: transparent;
+        transform: scale(1.0);
+        transition: .2s ease-in-out;
+    }
+    #menu-bar:checked ~ .nav-list{
+        display: inline-block;
+    }
+    header .nav-list > ul li button{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    header .nav-list > ul li > button{
+        color: var(--text-color);
+        transition: all 0.3s ease;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1;
+        align-items: center;
+        min-height: 2.25rem;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 420;
+        gap: 0.30rem;
+        font-family: 'Poppins', sans-serif;
+        flex-wrap: nowrap;
+        border-radius: 5px;
+        border: .1px solid var(--solid-line);
+        padding: 10px 15px;
+        white-space: nowrap;
+        background: none;
+        display: flex;
+        position: relative;
+        transition: all 0.2s ease-in-out;
+    }
+    .dropdown-wrapper{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin:0 8rem;
+        justify-content: center;
+        margin-top: 5px;
+        z-index: 10;
+    }
+    .dropdown{
+        border-radius: 0.3rem;
+        background: var(--gray);
+        display: none;
+        padding: 0.2rem;
+        width: 100%;
+        max-width: 75rem;
+        border: 1px solid var(--white);
+        box-shadow: 0 50px 100px -20px rgba(0,0,0,.12), 0 30px 60px -30px rgba(0,0,0, .15);
+        animation: fadein 0.2s ease-in-out;
+        z-index: 10;
+    }
+    .list-items-with-description{
+        list-style-type: none;
+        display: grid;
+        width: 100%;
+        flex-grow: 1;
+        align-items: flex-start;
+        text-align: left;
+        grid-template-columns: repeat(2, 200px);
+        z-index: 10;
+    }
+    .list-items-with-description li{
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+        padding: 0.2rem;
+        gap: 1rem;
+        width: 100%;
+        transition: all 0.2s ease-in-out;
+        border-radius: 0.375rem;
+    }
+    .list-items-with-description li ion-icon{
+        display: none;
+    }
+    .item-title h3{
+        font-weight: 520;
+        letter-spacing: .1px;
+        font-size: 13px;
+        margin-bottom: 3px;
+        color:black;
+    }
+    .item-title p{
+        font-size: 0.6rem;
+        white-space: nowrap;
+        color: gray;
+        font-weight: 400;
+    }
+    #main{
+        width: 100%;
+        min-height: 75vh;
+    }
+    .main-content{
+        display: block;
+        grid-template-columns: 1, 1fr;
+        grid-gap: 10px;
+        align-items: center;
+        text-align: center;
+        padding: 27px 13px 12px 13px;
+        flex-grow: 1;
+    }
+    .text-box{
+        padding: 8px;
+        width: 100%;
+        margin: auto;
+        align-items: flex-start;
+    }
+    .text-box h1{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-size: 400;
+        padding-bottom: 2.3px;
+    }
+    .text-box h2{
+        font-size: 31px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        padding-bottom: 2.3px;
+    }
+    .text-box bold{
+        font-weight: 520;
+        font-size: 32px;
+    }
+    .text-box h3{
+        font-size: 32px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        margin-bottom: 1.2rem;
+    }
+    .text-box .input{
+        font-weight: 520;
+        font-size: 32px;
+    }
+    .text-box p{
+        max-width: 530px;
+        margin: auto;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-align: justify;
+        line-height: 24px;
+        margin-bottom: 2rem;
+    }
+    .socials-apps a{
+        margin: 0 25px;
+        width: 43px;
+        height: 43px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.3em;
+        margin-bottom: 10px;
+    }
+    .banner-view img{
+        width: 45%;
+        margin: auto;
+        padding-top: 10px;
+    }
+    #about h1{
+        font-size: 18px;
+        padding-bottom: 3px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+    .solid-1{
+        width: 22%;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .about-container{
+        display: block;
+        grid-template-columns: 1, 1fr;
+        place-items: center;
+        align-items: center;
+        text-align: center;
+        flex-grow: 1;
+        padding: 10px 20px 20px 20px;
+        grid-gap: 10px;
+    }
+    .about-img{
+        width: 70%;
+        margin: auto;
+    }
+    .about-img img{
+        width: 70%;
+        height: 380px;
+        padding-bottom: 30px;
+        margin: auto;
+    }
+    .about-box{
+        padding: 75px 5px 10px 5px;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 2.1rem;
+        width: 95%;
+        margin: auto;
+    }
+    .about-box h2{
+        font-size: 17px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+    }
+    .about-box p{
+        font-size: 13px;
+        letter-spacing: 1px;
+        color: white;
+        text-align: justify;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 1.5rem;
+        align-self: start;
+    }
+    .about-box > .about-btn{
+        align-items: center;
+        place-items: center;
+        justify-content: center;
+    }
+    .cssbuttons-io-button {
+      font-size: 13px;
+      font-weight: 450;
+      letter-spacing: 0.04em;
+      display: flex;
+      height: 3.2em;
+      width: 12rem;
+    }
+
+    #services h1{
+        font-size: 21px;
+        letter-spacing: 1px;
+        font-weight: 520;
+    }
+    .solid-2{
+        width: 22%;
+        margin:auto;
+        margin-bottom: 1.5rem;
+    }
+    .services-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 25px;
+        padding: 25px 20px 15px 20px;
+        margin-bottom: 2rem;
+        flex-grow: 1;
+    }
+    .services-container .card{
+        padding: 10px;
+        width: 97%;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .services-container .card h2{
+        font-size: 19px;
+        padding-top: 5px;
+        letter-spacing: 1px;
+        font-weight: 520;
+        padding-bottom: 2px;
+        margin-bottom: 17px;
+    }
+    .services-container .card > img{
+        margin-bottom: 10px;
+        width: 35%;
+        margin: auto;
+        height: 200px;
+    }
+    .services-container .card p{
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 22px;
+        margin-bottom: 1.5rem;
+        padding-top: 20px;
+    }
+    .card-btn{
+        width: 10rem;
+        padding: 11px 10px;
+        margin-bottom: 1rem;
+    }
+    .card-btn a{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+    .accordion {
+        padding: 16px;
+        width: 100%;
+        text-align: center;
+        font-size: 13px;
+        letter-spacing: .1px;
+        font-weight: 450;
+        transition: 0.4s;
+      }
+    .panel {
+        padding: 16px;
+    }
+    .panel p{
+        font-size: 13px;
+        letter-spacing: .1px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+    .skills{
+        width: 100%;
+        padding-top: 26px;
+        padding-bottom: 20px;
+    }
+    .skills h3{
+        font-size: 21px;
+        font-weight: 520;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .solid-3{
+        width: 22%;
+        margin: auto;
+        margin-bottom: 1.5rem;
+    }
+    .content-items ol{
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        padding: 10px 13px;
+        align-items: flex-start;
+    }
+    #dj h1{
+        font-size: 15px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        margin-bottom: 10px;
+    }
+    .dj-blog{
+        width: 100%;
+        padding: 10px 5px 25px 5px;
+        flex-grow: 1;
+    }
+    .video-box{
+        width: 60%;
+        max-height: 30%;
+        padding: 5px 5px 5px 5px;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 2rem;
+        border: 2px solid rgb(13, 130, 226);
+        flex-grow: 1;
+        object-fit: fill;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px .1px rgb(6, 113, 212);
+    }
+    .video-box video{
+        width: 100%;
+        object-fit: fill;
+        max-height: 520px;
+        border-radius: 5px;
+    }
+    .blog-card{
+        width: 100%;
+        padding: 10px 3px 10px 3px;
+        column-gap: 2px;
+        margin-bottom: 15px;
+    }
+    .blog-card img{
+        min-width: 13%;
+        aspect-ratio: 1/ 1;
+        min-height: 120px;
+    }
+    #projects{
+        padding-top: 12px;
+    }
+    #projects h1{
+        font-size: 23px;
+        font-weight: 520;
+        margin-bottom: 1rem;
+    }
+    .project-list h2{
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-weight: 400px;
+        padding-bottom: 3px;
+    }
+    .controls button{
+        display: none;
+    }
+    .project-container{
+        display: grid;
+        grid-template-columns: repeat(7, 320px);
+        overflow-x: scroll;
+        grid-gap: 10px;
+        padding: 10px 5px 20px 5px;
+        margin-bottom: 1.5rem;
+        flex-grow: 1;
+    }
+    .website > .description h3{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+    .website > .description p{
+        font-weight: 13px;
+        letter-spacing: .1px;
+        font-weight: 400;
+        line-height: 18px;
+        margin-bottom: 20px;
+    }
+    .description a{
+        font-size: 12px;
+        letter-spacing: .1px;
+        border-radius: 5px;
+        padding: 10px 15px;
+    }
+    .all-projects button {
+      padding: 13px 30px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    #contact h1{
+        font-size: 20px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        padding-bottom: 5px;
+    }
+    .solid-5{
+        width: 12rem;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+    .contact-box{
+        width: 95%;
+        flex-grow: 1;
+        margin: auto;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 35px 15px 35px;
+    }
+    .form-link{
+        width: 100%;
+        margin: auto;
+        border-right: none;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    form{
+        width: 95%;
+        margin: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 10px 25px 15px 25px;
+    }
+    form .input-group > input, textarea{
+        width: 100%;
+        padding: 12px 10px;
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }    
+    form p{
+        font-size: 12px;
+        letter-spacing: .1px;
+    }
+    .form-img img{
+        height: 450px;
+        width: 100%;
+        display: none;
+        margin: auto;
+    }
+    /*///////////////////////////////////*/
+    /*//////////////////////////////////*/
+    #footer{
+        width: 100%;
+        padding-top: 22px;
+        padding-bottom: 20px;
+    }
+    #footer h1{
+        font-size: 20px;
+        letter-spacing: 1px;
+        font-weight: 520;
+        padding-bottom: 5px;
+    }
+    .solid-6{
+        width: 13rem;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .footer-list{
+        width: 100%;
+        display: block;
+        align-items: flex-start;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 15px 23px 10px 23px;
+    }
+    .footer-card h2{
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 420px;
+        margin-top: 11px;
+        margin-bottom: 1.6rem;
+        padding: 5px;
+    }
+    .footer-card ul li{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        align-self: start;
+        align-items: flex-start;
+        padding-bottom: 12px;
+    }
+    .footer-card li > a{
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-align: left;
+    }
+    .footer-card ul ion-icon{
+        width: 10px;
+        height: 10px;
+    }
+    .footer-card .platforms li a{
+        padding: 0 20px;
+    }
+    .footer-card .platforms li a ion-icon{
+        width: 23px;
+        height: 23px;
+        margin-bottom: 5px;
+        padding: 8px 8px;
+        flex-grow: 1;
+    }
+    .rights h1{
+        font-size: 12px;
+        letter-spacing: .1px;
+        font-weight: 400;
+    }
+    .rights a ion-icon{
+        width: 27px;
+        height: 27px;
+        padding: 6px 6px;
+        position: fixed;
+        bottom: 25px;
+        right: 5px;
+        line-height: 40px;
+    }
+}
+@media screen and (max-width:576px){
+    header .nav-list ul li{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .dropdown-wrapper{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin:0 8rem;
+        justify-content: center;
+        margin-top: 3px;
+        z-index: 10;
+    }
+    .dropdown{
+        border-radius: 0.3rem;
+        background: var(--gray);
+        display: none;
+        padding: 0.2rem;
+        width: 100%;
+        max-width: 70rem;
+        border: 1px solid var(--white);
+        box-shadow: 0 50px 100px -20px rgba(0,0,0,.12), 0 30px 60px -30px rgba(0,0,0, .15);
+        animation: fadein 0.2s ease-in-out;
+        z-index: 10;
+    }
+    .list-items-with-description{
+        list-style-type: none;
+        display: grid;
+        width: 100%;
+        flex-grow: 1;
+        align-items: flex-start;
+        text-align: left;
+        grid-template-columns: repeat(2, 190px);
+        z-index: 10;
+    }
+    .list-items-with-description li{
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+        padding: 0.2rem;
+        gap: 10px;
+        width: 100%;
+        transition: all 0.2s ease-in-out;
+        border-radius: 0.375rem;
+    }
+    .list-items-with-description li ion-icon{
+        display: none;
+    }
+    .item-title h3{
+        font-weight: 520;
+        letter-spacing: .1px;
+        font-size: 13px;
+        margin-bottom: 3px;
+        color:black;
+    }
+    .item-title p{
+        font-size: 0.6rem;
+        white-space: nowrap;
+        color: gray;
+        font-weight: 400;
+    }
+}
+@media screen and (max-width: 530px) {
+    .checkbtn ion-icon{
+        font-size: 50px;
+        width: 45px;
+        height: 45px;
+        border: 1px solid var(--solid-line);
+        border-radius: .5rem;
+        padding: .1rem 1rem;
+    }
+    header{
+        width: 100%;
+        display: flex;
+        padding: 14px 12px 13px 12px;
+    }
+    header .logo-img{
+        width: 53px;
+        height: 53px;
+    }
+    header .navigation{
+        padding: 2px;
+    }
+    header .nav-list{
+        top: 100%;
+        z-index: 500;
+        padding-bottom: 10px;
+        width: 100%;
+    }
+    header .nav-list ul li{
+        width: 100%;
+        position: relative;
+        padding: 3px;
+        padding-bottom: 5px;
+    }
+    header ul li{
+        display: block;
+        margin-right: 0px;
+        margin-left: 0px;
+        line-height: 16px;
+        text-align: left;
+        width: 100%;
+    }
+    header .nav-list ul li a{
+        color: white;
+        font-weight: 500;
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+    #menu-bar:checked ~ .nav-list{
+        display: inline-block;
+    }
+    .dropdown-wrapper{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin:0 6rem;
+        justify-content: center;
+        margin-top: 3px;
+        z-index: 10;
+    }
+    .dropdown{
+        border-radius: 0.3rem;
+        background: var(--gray);
+        display: none;
+        padding: 0.2rem;
+        width: 100%;
+        max-width: 70rem;
+        z-index: 10;
+    }
+    .list-items-with-description{
+        list-style-type: none;
+        display: grid;
+        width: 100%;
+        flex-grow: 1;
+        align-items: flex-start;
+        text-align: left;
+        grid-template-columns: repeat(2, 180px);
+        z-index: 10;
+    }
+    .list-items-with-description li{
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+        padding: 0.2rem;
+        gap: 8px;
+        width: 100%;
+    }
+    .list-items-with-description li ion-icon{
+        display: none;
+    }
+    .item-title h3{
+        font-weight: 450;
+        letter-spacing: 0px;
+        font-size: 13px;
+        margin-bottom: 3px;
+        color:black;
+    }
+    .item-title p{
+        font-size: 0.5rem;
+        white-space: nowrap;
+        color: gray;
+        font-weight: 400;
+    }
+    #main{
+        width: 100%;
+        min-height: 75vh;
+    }
+    .main-content{
+        display: block;
+        grid-template-columns: 1, 1fr;
+        grid-gap: 10px;
+        align-items: center;
+        text-align: center;
+        padding: 30px 12px 10px 12px;
+        flex-grow: 1;
+    }
+    .text-box{
+        padding: 10px;
+        width: 100%;
+        margin: auto;
+    }
+    .text-box h1{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-size: 400;
+        padding-bottom: 2px;
+    }
+    .text-box h2{
+        font-size: 28px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        padding-bottom: 2px;
+    }
+    .text-box bold{
+        font-weight: 520;
+        font-size: 28px;
+    }
+    .text-box h3{
+        font-size: 28px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        margin-bottom: 1.2rem;
+    }
+    .text-box .input{
+        font-weight: 520;
+        font-size: 28px;
+    }
+    .text-box p{
+        max-width: 500px;
+        margin: auto;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: .1px;
+        text-align: justify;
+        line-height: 23px;
+        margin-bottom: 2rem;
+    }
+    .socials-apps a{
+        margin: 0 23px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.2em;
+        margin-bottom: 10px;
+    }
+    .banner-view{
+        width: 80%;
+        margin: auto;
+    }
+    .banner-view img{
+        width: 80%;
+        margin: auto;
+        padding-top: 10px;
+    }
+    #about h1{
+        font-size: 18px;
+        padding-bottom: 3px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+    .solid-1{
+        width: 24%;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .about-container{
+        display: block;
+        grid-template-columns: 1, 1fr;
+        place-items: center;
+        align-items: center;
+        text-align: center;
+        flex-grow: 1;
+        padding: 10px 12px 15px 12px;
+        grid-gap: 10px;
+    }
+    .about-img{
+        width: 80%;
+        margin: auto;
+    }
+    .about-img img{
+        width: 75%;
+        height: 400px;
+        padding-bottom: 30px;
+        margin: auto;
+    }
+    .about-box{
+        padding: 15px 5px 10px 5px;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 2.1rem;
+        width: 95%;
+        margin: auto;
+    }
+    .about-box h2{
+        font-size: 15px;
+        letter-spacing: 1px;
+        font-weight: 450;
+        margin-bottom: 1.7rem;
+    }
+    .about-box p{
+        font-size: 13px;
+        letter-spacing: .1px;
+        color: white;
+        text-align: justify;
+        font-weight: 400;
+        line-height: 23px;
+        margin-bottom: 1.5rem;
+    }
+    .about-box > .about-btn{
+        align-items: center;
+        place-items: center;
+        justify-content: center;
+    }
+    .cssbuttons-io-button {
+      font-size: 13px;
+      font-weight: 450;
+      letter-spacing: 0.03em;
+      display: flex;
+      height: 3.5em;
+      width: 12rem;
+    }
+    #services{
+        padding-top: 20px;
+    }
+    #services h1{
+        font-size: 20px;
+        letter-spacing: 1px;
+        font-weight: 520;
+    }
+    .solid-2{
+        width: 24%;
+        margin:auto;
+        margin-bottom: 1rem;
+    }
+    .services-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 25px;
+        padding: 25px 15px 15px 15px;
+        margin-bottom: 2rem;
+        flex-grow: 1;
+    }
+    .services-container .card{
+        padding: 10px;
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .services-container .card h2{
+        font-size: 19px;
+        padding-top: 5px;
+        letter-spacing: 1px;
+        font-weight: 520;
+        padding-bottom: 2px;
+        margin-bottom: 17px;
+    }
+    .services-container .card > img{
+        margin-bottom: 10px;
+        width: 37%;
+        margin: auto;
+        height: 180px;
+    }
+    .services-container .card p{
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 22px;
+        margin-bottom: 1.5rem;
+        padding-top: 22px;
+    }
+    .card-btn{
+        width: 10rem;
+        padding: 10px 10px;
+        margin-bottom: 1rem;
+    }
+    .card-btn a{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+    .accordion {
+        padding: 16px;
+        width: 100%;
+        text-align: center;
+        font-size: 13px;
+        letter-spacing: .1px;
+        font-weight: 450;
+        transition: 0.4s;
+      }
+    .panel {
+        padding: 10px;
+    }
+    .panel p{
+        font-size: 12px;
+        letter-spacing: .1px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+    .skills{
+        width: 100%;
+        padding-top: 26px;
+        padding-bottom: 20px;
+    }
+    .skills h3{
+        font-size: 20px;
+        font-weight: 520;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .solid-3{
+        width: 25%;
+        margin: auto;
+        margin-bottom: 1.5rem;
+    }
+    .content-items ol{
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        padding: 10px 12px;
+    }
+    #dj h1{
+        font-size: 15px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        margin-bottom: 10px;
+    }
+    .dj-blog{
+        width: 100%;
+        padding: 5px 5px 20px 5px;
+        flex-grow: 1;
+    }
+    .video-box{
+        width: 80%;
+        padding: 5px 5px 5px 5px;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+    .video-box video{
+        width: 100%;
+        object-fit: fill;
+        max-height: 500px;
+        border-radius: 5px;
+    }
+    .blog-card{
+        width: 100%;
+        padding: 10px 3px 10px 3px;
+        column-gap: 2px;
+        margin-bottom: 15px;
+    }
+    .blog-card img{
+        min-width: 13%;
+        aspect-ratio: 1/ 1;
+        min-height: 100px;
+    }
+    #projects{
+        padding-top: 12px;
+    }
+    #projects h1{
+        font-size: 21px;
+        font-weight: 520;
+        margin-bottom: 1rem;
+    }
+    .project-list h2{
+        font-size: 14px;
+        letter-spacing: 1px;
+        font-weight: 400px;
+        padding-bottom: 3px;
+    }
+    .project-container{
+        display: grid;
+        grid-template-columns: repeat(7, 300px);
+        overflow-x: scroll;
+        grid-gap: 5px;
+        padding: 10px 5px 20px 5px;
+        margin-bottom: 1.5rem;
+        flex-grow: 1;
+    }
+    .website > .description h3{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+    .website > .description p{
+        font-weight: 12px;
+        letter-spacing: .1px;
+        font-weight: 400;
+        line-height: 18px;
+        margin-bottom: 20px;
+    }
+    .description a{
+        font-size: 12px;
+        letter-spacing: .1px;
+        padding: 10px 15px;
+    }
+    .all-projects button {
+      padding: 13px 35px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    #contact h1{
+        font-size: 20px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        padding-bottom: 5px;
+    }
+    .solid-5{
+        width: 12rem;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+    .contact-box{
+        width: 95%;
+        flex-grow: 1;
+        margin: auto;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 35px 15px 35px;
+    }
+    .form-link{
+        width: 100%;
+        margin: auto;
+        border-right: none;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    form{
+        width: 95%;
+        margin: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 10px 25px 15px 25px;
+    }
+    form .input-group > input, textarea{
+        width: 100%;
+        padding: 12px 10px;
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }    
+    form p{
+        font-size: 12px;
+        letter-spacing: .1px;
+    }
+    .form-img img{
+        height: 450px;
+        width: 100%;
+        display: none;
+        margin: auto;
+    }
+    /*///////////////////////////////////*/
+    /*//////////////////////////////////*/
+    #footer{
+        width: 100%;
+        padding-top: 22px;
+        padding-bottom: 20px;
+    }
+    #footer h1{
+        font-size: 20px;
+        letter-spacing: 1px;
+        font-weight: 520;
+        padding-bottom: 5px;
+    }
+    .solid-6{
+        width: 13rem;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .footer-list{
+        width: 100%;
+        display: block;
+        align-items: flex-start;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 15px 23px 10px 23px;
+    }
+    .footer-card h2{
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 420px;
+        margin-top: 11px;
+        margin-bottom: 1.6rem;
+        padding: 5px;
+    }
+    .footer-card ul li{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        align-self: start;
+        align-items: flex-start;
+        padding-bottom: 12px;
+    }
+    .footer-card li > a{
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-align: left;
+    }
+    .footer-card ul ion-icon{
+        width: 10px;
+        height: 10px;
+    }
+    .footer-card .platforms li a{
+        padding: 0 20px;
+    }
+    .footer-card .platforms li a ion-icon{
+        width: 23px;
+        height: 23px;
+        margin-bottom: 5px;
+        padding: 8px 8px;
+        flex-grow: 1;
+    }
+    .rights h1{
+        font-size: 12px;
+        letter-spacing: .1px;
+        font-weight: 400;
+    }
+    .rights a ion-icon{
+        width: 27px;
+        height: 27px;
+        padding: 6px 6px;
+        position: fixed;
+        bottom: 25px;
+        right: 5px;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width:475px) {
+    .checkbtn ion-icon{
+        font-size: 45px;
+        width: 40px;
+        height: 40px;
+        padding: .1rem 1rem;
+    }
+    header{
+        width: 100%;
+        display: flex;
+        padding: 15px 10px 13px 10px;
+    }
+    header .logo-img{
+        width: 50px;
+        height: 50px;
+    }
+    header .nav-list ul li .drop-btn{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    header ul li{
+        display: block;
+        margin-right: 0px;
+        margin-left: 0px;
+        line-height: 15px;
+        width: 100%;
+    }
+    header .nav-list ul li a{
+        color: white;
+        font-weight: 500;
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+    #menu-bar:checked ~ .nav-list{
+        display: inline-block;
+    }
+    .dropdown-wrapper{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin:0 4rem;
+        justify-content: center;
+        margin-top: 1px;
+        z-index: 10;
+    }
+    .dropdown{
+        border-radius: 0.3rem;
+        background: var(--gray);
+        display: none;
+        padding: 0.1rem;
+        width: 100%;
+        max-width: 60rem;
+        z-index: 10;
+    }
+    .list-items-with-description{
+        list-style-type: none;
+        display: grid;
+        width: 100%;
+        flex-grow: 1;
+        align-items: flex-start;
+        text-align: left;
+        grid-template-columns: repeat(2, 150px);
+        z-index: 10;
+    }
+    .list-items-with-description li{
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+        padding: 0.1rem;
+        gap: 3px;
+        width: 100%;
+    }
+    .list-items-with-description li ion-icon{
+        display: none;
+    }
+    .item-title h3{
+        font-weight: 420;
+        letter-spacing: 0px;
+        font-size: 11px;
+        margin-bottom: 2px;
+        color:black;
+    }
+    .item-title p{
+        font-size: 0.5rem;
+        white-space: nowrap;
+        color: gray;
+        font-weight: 400;
+    }
+    #main{
+        width: 100%;
+        min-height: 75vh;
+    }
+    .main-content{
+        display: block;
+        grid-template-columns: 1, 1fr;
+        grid-gap: 5px;
+        padding: 27px 5px 10px 5px;
+    }
+    .text-box{
+        padding: 10px;
+        width: 100%;
+        margin: auto;
+    }
+    .text-box h1{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-size: 400;
+        padding-bottom: 2px;
+    }
+    .text-box h2{
+        font-size: 26px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        padding-bottom: 2px;
+    }
+    .text-box bold{
+        font-weight: 520;
+        font-size: 26px;
+    }
+    .text-box h3{
+        font-size: 26px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        margin-bottom: 1.2rem;
+    }
+    .text-box .input{
+        font-weight: 520;
+        font-size: 26px;
+    }
+    .text-box p{
+        max-width: 500px;
+        margin: auto;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: .1px;
+        text-align: justify;
+        line-height: 22px;
+        margin-bottom: 1.7rem;
+    }
+    .socials-apps a{
+        margin: 0 12px;
+        width: 40px;
+        height: 40px;
+        font-size: 2.2em;
+        margin-bottom: 10px;
+    }
+    .banner-view{
+        width: 70%;
+        /*/code <down*/
+        margin: auto;
+    }
+    .banner-view img{
+        width: 80%;
+        margin: auto;
+        padding-top: 10px;
+    }
+    #about h1{
+        font-size: 17px;
+        padding-bottom: 3px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+    .solid-1{
+        width: 26%;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .about-container{
+        display: block;
+        grid-template-columns: 1, 1fr;
+        padding: 10px 5px 15px 5px;
+        grid-gap: 10px;
+    }
+    .about-img{
+        width: 80%;
+        margin: auto;
+    }
+    .about-img img{
+        width: 75%;
+        height: 380px;
+        padding-bottom: 30px;
+        margin: auto;
+    }
+    .about-box{
+        padding: 15px 10px 10px 10px;
+        padding-top: 2.1rem;
+        width: 100%;
+        margin: auto;
+    }
+    .about-box h2{
+        font-size: 15px;
+        letter-spacing: .1px;
+        font-weight: 450;
+        margin-bottom: 1.8rem;
+    }
+    .about-box p{
+        font-size: 12px;
+        letter-spacing: .1px;
+        text-align: justify;
+        font-weight: 400;
+        line-height: 22px;
+        margin-bottom: 1.5rem;
+    }
+    .cssbuttons-io-button {
+      font-size: 12px;
+      font-weight: 420;
+      letter-spacing: 0.03em;
+      display: flex;
+      height: 3.3em;
+      width: 12rem;
+    }
+    #services{
+        padding-top: 20px;
+    }
+    #services h1{
+        font-size: 19px;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+    .solid-2{
+        width: 26%;
+        margin:auto;
+        margin-bottom: 1rem;
+    }
+    .services-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 25px;
+        padding: 25px 13px 15px 13px;
+        margin-bottom: 2rem;
+        flex-grow: 1;
+    }
+    .services-container .card{
+        padding: 10px;
+        width: 100%;
+        margin: auto;
+    }
+    .services-container .card h2{
+        font-size: 18px;
+        padding-top: 5px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        padding-bottom: 2px;
+        margin-bottom: 17px;
+    }
+    .services-container .card > img{
+        margin-bottom: 10px;
+        width: 40%;
+        margin: auto;
+        height: 160px;
+    }
+    .services-container .card p{
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: .1px;
+        line-height: 22px;
+        margin-bottom: 1.5rem;
+        padding-top: 22px;
+    }
+    .card-btn{
+        width: 9rem;
+        padding: 10px 10px;
+        margin-bottom: 1rem;
+    }
+    .card-btn a{
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+    .accordion {
+        padding: 14px;
+        width: 100%;
+        font-size: 12px;
+        letter-spacing: .1px;
+        font-weight: 420;
+      }
+    .panel {
+        padding: 10px;
+    }
+    .panel p{
+        font-size: 12px;
+        letter-spacing: .1px;
+        font-weight: 400;
+        line-height: 19px;
+    }
+    .skills{
+        width: 100%;
+        padding-top: 26px;
+        padding-bottom: 20px;
+    }
+    .skills h3{
+        font-size: 19px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    .solid-3{
+        width: 27%;
+        margin: auto;
+        margin-bottom: 1.5rem;
+    }
+    .content-items ol{
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        padding: 10px 12px;
+    }
+    #dj h1{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        margin-bottom: 10px;
+    }
+    .dj-blog{
+        width: 100%;
+        padding: 5px 5px 20px 5px;
+        flex-grow: 1;
+    }
+    .video-box{
+        width: 90%;
+        padding: 5px 5px 5px 5px;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+    .video-box video{
+        width: 100%;
+        object-fit: fill;
+        max-height: 500px;
+        border-radius: 5px;
+    }
+    .blog-card{
+        width: 100%;
+        padding: 10px 3px 10px 3px;
+        column-gap: 2px;
+        margin-bottom: 15px;
+    }
+    .blog-card img{
+        min-width: 13%;
+        aspect-ratio: 1/ 1;
+        min-height: 100px;
+    }
+    #projects{
+        padding-top: 12px;
+    }
+    #projects h1{
+        font-size: 21px;
+        font-weight: 520;
+        margin-bottom: 1rem;
+    }
+    .project-list{
+        width: 100%;
+        padding: 12px 5px 20px 5px;
+    }
+    .project-list h2{
+        font-size: 14px;
+        letter-spacing: 1px;
+        font-weight: 400px;
+        padding-bottom: 3px;
+    }
+    .project-container{
+        display: grid;
+        grid-template-columns: repeat(7, 300px);
+        overflow-x: scroll;
+        grid-gap: 5px;
+        padding: 10px 5px 20px 5px;
+        margin-bottom: 1.7rem;
+        flex-grow: 1;
+    }
+    .website{
+        padding: 5px 5px 10px 5px;
+    }
+    .website img{
+        width: 100%;
+        height: 200px;
+        margin-bottom: 10px;
+    }
+    .website > .description h3{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+    .website > .description p{
+        font-weight: 12px;
+        letter-spacing: .1px;
+        font-weight: 400;
+        line-height: 18px;
+        margin-bottom: 20px;
+    }
+    .description a{
+        font-size: 12px;
+        letter-spacing: .1px;
+        padding: 10px 15px;
+    }
+    .all-projects button {
+      padding: 13px 35px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+    #contact h1{
+        font-size: 20px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        padding-bottom: 5px;
+    }
+    .solid-5{
+        width: 10rem;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .contact-box{
+        width: 100%;
+        flex-grow: 1;
+        margin: auto;
+        display: block;
+        padding: 10px 18px 15px 18px;
+    }
+    .form-link{
+        width: 100%;
+        margin: auto;
+    }
+    form{
+        width: 100%;
+        margin: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 10px 16px 15px 16px;
+    }
+    form .input-group > input, textarea{
+        width: 100%;
+        padding: 12px 10px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }    
+    form p{
+        font-size: 12px;
+        letter-spacing: .1px;
+    }
+    .form-img img{
+        display: none;
+    }
+    /*///////////////////////////////////*/
+    /*//////////////////////////////////*/
+    #footer{
+        width: 100%;
+        padding-top: 22px;
+        padding-bottom: 20px;
+    }
+    #footer h1{
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 520;
+        padding-bottom: 5px;
+    }
+    .solid-6{
+        width: 14rem;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .footer-list{
+        width: 100%;
+        display: block;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 15px 15px 10px 15px;
+    }
+    .footer-card h2{
+        font-size: 17px;
+        letter-spacing: 1px;
+        font-weight: 420px;
+        margin-top: 11px;
+        margin-bottom: 1.6rem;
+        padding: 5px;
+    }
+    .footer-card ul li{
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        padding-bottom: 11px;
+    }
+    .footer-card li > a{
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+    .footer-card ul ion-icon{
+        width: 10px;
+        height: 10px;
+    }
+    .footer-card .platforms li a{
+        padding: 0 14px;
+    }
+    .footer-card .platforms li a ion-icon{
+        width: 20px;
+        height: 20px;
+        margin-bottom: 5px;
+        padding: 7px 7px;
+    }
+    .rights h1{
+        font-size: 12px;
+        letter-spacing: .1px;
+        font-weight: 400;
+    }
+    .rights a ion-icon{
+        width: 25px;
+        height: 25px;
+        padding: 5px 5px;
+        position: fixed;
+        bottom: 25px;
+        right: 0px;
+        line-height: 35px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .checkbtn ion-icon{
+        font-size: 45px;
+        width: 40px;
+        height: 40px;
+        padding: .1rem 1rem;
+    }
+    header{
+        width: 100%;
+        display: flex;
+        padding: 15px 8px 13px 8px;
+    }
+    header .logo-img{
+        width: 45px;
+        height: 45px;
+    }
+    header ul li{
+        line-height: 13px;
+        width: 100%;
+    }
+    header .nav-list ul li a{
+        font-weight: 450;
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+    #menu-bar:checked ~ .nav-list{
+        display: inline-block;
+    }
+    #main{
+        width: 100%;
+        min-height: 75vh;
+    }
+    .main-content{
+        display: block;
+        grid-template-columns: 1, 1fr;
+        grid-gap: 5px;
+        padding: 30px 5px 10px 5px;
+    }
+    .text-box{
+        padding: 10px;
+        width: 100%;
+        margin: auto;
+    }
+    .text-box h1{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-size: 400;
+        padding-bottom: 2.5px;
+    }
+    .text-box h2{
+        font-size: 24px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        padding-bottom: 2px;
+    }
+    .text-box bold{
+        font-weight: 520;
+        font-size: 24px;
+    }
+    .text-box h3{
+        font-size: 24px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        margin-bottom: 1.2rem;
+    }
+    .text-box .input{
+        font-weight: 520;
+        font-size: 24px;
+    }
+    .text-box p{
+        max-width: 500px;
+        margin: auto;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: .1px;
+        text-align: justify;
+        line-height: 22px;
+        margin-bottom: 1.7rem;
+    }
+    .socials-apps{
+        min-width: 30%;
+        margin: auto;
+    }
+    .socials-apps a{
+        margin: 0 12px;
+        width: 40px;
+        height: 40px;
+        font-size: 2.2em;
+        margin-bottom: 10px;
+    }
+    .banner-view{
+        width: 70%;
+        /*/code <down*/
+        margin: auto;
+    }
+    .banner-view img{
+        width: 80%;
+        margin: auto;
+        padding-top: 10px;
+    }
+    #about h1{
+        font-size: 16px;
+        padding-bottom: 3px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+    .solid-1{
+        width: 30%;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .about-container{
+        display: block;
+        grid-template-columns: 1, 1fr;
+        padding: 10px 5px 15px 5px;
+        grid-gap: 10px;
+    }
+    .about-img{
+        width: 80%;
+        margin: auto;
+    }
+    .about-img img{
+        width: 73%;
+        height: 350px;
+        padding-bottom: 30px;
+        margin: auto;
+    }
+    .about-box{
+        padding: 15px 8px 10px 8px;
+        padding-top: 2.1rem;
+        width: 100%;
+        margin: auto;
+    }
+    .about-box h2{
+        font-size: 14px;
+        letter-spacing: .1px;
+        font-weight: 450;
+        margin-bottom: 1.5rem;
+    }
+    .about-box p{
+        font-size: 12px;
+        letter-spacing: .1px;
+        text-align: justify;
+        font-weight: 400;
+        line-height: 22px;
+        margin-bottom: 1.5rem;
+    }
+    .cssbuttons-io-button {
+      font-size: 12px;
+      font-weight: 420;
+      letter-spacing: 0.03em;
+      display: flex;
+      height: 3.3em;
+      width: 11rem;
+    }
+    #services{
+        padding-top: 20px;
+    }
+    #services h1{
+        font-size: 20px;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+    .solid-2{
+        width: 30%;
+        margin:auto;
+        margin-bottom: 1rem;
+    }
+    .services-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 25px;
+        padding: 25px 13px 15px 13px;
+        margin-bottom: 2rem;
+        flex-grow: 1;
+    }
+    .services-container .card{
+        padding: 8px;
+        width: 100%;
+        margin: auto;
+    }
+    .services-container .card h2{
+        font-size: 18px;
+        padding-top: 5px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        padding-bottom: 2px;
+        margin-bottom: 17px;
+    }
+    .services-container .card > img{
+        margin-bottom: 10px;
+        width: 40%;
+        margin: auto;
+        height: 160px;
+    }
+    .services-container .card p{
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: .1px;
+        line-height: 22px;
+        margin-bottom: 1.5rem;
+        padding-top: 22px;
+    }
+    .card-btn{
+        width: 9rem;
+        padding: 10px 10px;
+        margin-bottom: 1rem;
+    }
+    .card-btn a{
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+    .accordion {
+        padding: 12px;
+        width: 100%;
+        font-size: 12px;
+        letter-spacing: .1px;
+        font-weight: 420;
+      }
+    .panel {
+        padding: 8px;
+    }
+    .panel p{
+        font-size: 12px;
+        letter-spacing: 0px;
+        font-weight: 400;
+        line-height: 19px;
+    }
+    .skills{
+        width: 100%;
+        padding-top: 26px;
+        padding-bottom: 10px;
+    }
+    .skills h3{
+        font-size: 19px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    .solid-3{
+        width: 32%;
+        margin: auto;
+        margin-bottom: 1.5rem;
+    }
+    .content-items ol{
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        padding: 10px 12px;
+    }
+    #dj h1{
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 440;
+        margin-bottom: 10px;
+    }
+    .dj-blog{
+        width: 100%;
+        padding: 5px 5px 20px 5px;
+        flex-grow: 1;
+    }
+    .video-box{
+        width: 90%;
+        padding: 5px 5px 5px 5px;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+    .video-box video{
+        width: 100%;
+        object-fit: fill;
+        max-height: 480px;
+        border-radius: 5px;
+    }
+    .blog-card{
+        width: 100%;
+        padding: 5px .1px 5px .1px;
+        column-gap: 1px;
+        margin-bottom: 15px;
+    }
+    .blog-card img{
+        min-width: 13.5%;
+        height: 95px;
+        aspect-ratio: 1/ 1;
+        min-height: 100px;
+    }
+    #projects{
+        padding-top: 12px;
+    }
+    #projects h1{
+        font-size: 19px;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+    .project-list{
+        width: 100%;
+        padding: 12px 2px 20px 3px;
+    }
+    .project-list h2{
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 400px;
+        padding-bottom: 3px;
+    }
+    .project-container{
+        display: grid;
+        grid-template-columns: repeat(7, 300px);
+        overflow-x: scroll;
+        grid-gap: 4px;
+        padding: 10px 5px 20px 5px;
+        margin-bottom: 1.7rem;
+        flex-grow: 1;
+    }
+    .website{
+        padding: 5px 3px 10px 3px;
+    }
+    .website img{
+        width: 100%;
+        height: 190px;
+        margin-bottom: 10px;
+    }
+    .website > .description h3{
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+    .website > .description p{
+        font-weight: 12px;
+        letter-spacing: 0px;
+        font-weight: 400;
+        line-height: 18px;
+        margin-bottom: 22px;
+    }
+    .description a{
+        font-size: 11px;
+        letter-spacing: 0px;
+        padding: 10px 13px;
+    }
+    .all-projects button {
+      padding: 11px 30px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+    #contact h1{
+        font-size: 19px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        padding-bottom: 5px;
+    }
+    .solid-5{
+        width: 12rem;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .contact-box{
+        width: 100%;
+        flex-grow: 1;
+        margin: auto;
+        display: block;
+        padding: 10px 18px 15px 18px;
+    }
+    .form-link{
+        width: 100%;
+        margin: auto;
+    }
+    form{
+        width: 100%;
+        margin: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 10px 16px 15px 16px;
+    }
+    form label, form input::placeholder, textarea::placeholder{
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+    form .input-group > input, textarea{
+        width: 100%;
+        padding: 11px 10px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }    
+    form p{
+        font-size: 12px;
+        letter-spacing: .1px;
+    }
+    .form-img img{
+        display: none;
+    }
+    /*///////////////////////////////////*/
+    /*//////////////////////////////////*/
+    #footer{
+        width: 100%;
+        padding-top: 22px;
+        padding-bottom: 20px;
+    }
+    #footer h1{
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 520;
+        padding-bottom: 5px;
+    }
+    .solid-6{
+        width: 12rem;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .footer-list{
+        width: 100%;
+        display: block;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 15px 13px 10px 13px;
+    }
+    .footer-card h2{
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-weight: 420px;
+        margin-top: 10px;
+        margin-bottom: 1.6rem;
+        padding: 5px;
+    }
+    .footer-card ul li{
+        font-size: 12px;
+        letter-spacing: .1px;
+        font-weight: 400;
+        padding-bottom: 10px;
+    }
+    .footer-card li > a{
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+    .footer-card ul ion-icon{
+        width: 10px;
+        height: 10px;
+    }
+    .footer-card .platforms li a{
+        padding: 0 12px;
+    }
+    .footer-card .platforms li a ion-icon{
+        width: 20px;
+        height: 20px;
+        margin-bottom: 5px;
+        padding: 7px 7px;
+    }
+    .rights h1{
+        font-size: 11px;
+        letter-spacing: .1px;
+        font-weight: 400;
+    }
+    .rights a ion-icon{
+        width: 23px;
+        height: 25px;
+        padding: 5px 5px;
+        position: fixed;
+        bottom: 25px;
+        right: 0px;
+        line-height: 35px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .checkbtn ion-icon{
+        font-size: 40px;
+        width: 38px;
+        height: 38px;
+        padding: .1rem 1rem;
+    }
+    header{
+        width: 100%;
+        display: flex;
+        padding: 15px 5px 10px 5px;
+    }
+    header .logo-img{
+        width: 40px;
+        height: 40px;
+    }
+    header ul li{
+        line-height: 13px;
+        width: 100%;
+    }
+    header .nav-list ul li a{
+        font-weight: 450;
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+    #menu-bar:checked ~ .nav-list{
+        display: inline-block;
+    }
+    .dropdown-wrapper{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin:0 3rem;
+        justify-content: center;
+        margin-top: 1px;
+        z-index: 10;
+    }
+    .dropdown{
+        border-radius: 0.3rem;
+        background: var(--gray);
+        display: none;
+        padding: 0.1rem;
+        width: 100%;
+        max-width: 60rem;
+        z-index: 10;
+    }
+    .list-items-with-description{
+        list-style-type: none;
+        display: grid;
+        width: 100%;
+        flex-grow: 1;
+        align-items: flex-start;
+        text-align: left;
+        grid-template-columns: repeat(2, 130px);
+        z-index: 10;
+    }
+    .list-items-with-description li{
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+        padding: 0.1rem;
+        gap: 3px;
+        width: 100%;
+    }
+    .item-title h3{
+        font-weight: 420;
+        letter-spacing: 0;
+        font-size: 10px;
+        margin-bottom: 2px;
+        color:black;
+    }
+    .item-title p{
+        font-size: 0.4rem;
+        white-space: nowrap;
+        color: gray;
+        font-weight: 400;
+    }
+    #main{
+        width: 100%;
+        min-height: 75vh;
+    }
+    .main-content{
+        display: block;
+        grid-template-columns: 1, 1fr;
+        grid-gap: 5px;
+        padding: 30px 5px 10px 5px;
+    }
+    .text-box{
+        padding: 8px;
+        width: 100%;
+        margin: auto;
+    }
+    .text-box h1{
+        font-size: 13px;
+        letter-spacing: 1.2px;
+        font-size: 400;
+        padding-bottom: 4.5px;
+    }
+    .text-box h2{
+        font-size: 22px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        padding-bottom: 2px;
+    }
+    .text-box bold{
+        font-weight: 520;
+        font-size: 22px;
+    }
+    .text-box h3{
+        font-size: 22px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        margin-bottom: 1.2rem;
+    }
+    .text-box .input{
+        font-weight: 520;
+        font-size: 22px;
+    }
+    .text-box p{
+        max-width: 500px;
+        margin: auto;
+        font-size: 12px;
+        letter-spacing: 0px;
+        text-align: justify;
+        line-height: 22px;
+        margin-bottom: 1.7rem;
+    }
+    .socials-apps{
+        min-width: 20%;
+        margin: auto;
+    }
+    .socials-apps a{
+        margin: 0 10px;
+        width: 38px;
+        height: 38px;
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+    .banner-view{
+        width: 60%;
+        /*/code <down*/
+        margin: auto;
+    }
+    .banner-view img{
+        width: 80%;
+        margin: auto;
+        padding-top: 10px;
+    }
+    #about h1{
+        font-size: 16px;
+        padding-bottom: 3px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+    .solid-1{
+        width: 32%;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .about-container{
+        display: block;
+        grid-template-columns: 1, 1fr;
+        padding: 10px 5px 15px 5px;
+        grid-gap: 10px;
+    }
+    .about-img{
+        width: 80%;
+        margin: auto;
+    }
+    .about-img img{
+        width: 70%;
+        height: 300px;
+        padding-bottom: 30px;
+        margin: auto;
+    }
+    .about-box{
+        padding: 15px 5px 10px 5px;
+        padding-top: 2.1rem;
+        width: 100%;
+        margin: auto;
+    }
+    .about-box h2{
+        font-size: 13px;
+        letter-spacing: 0px;
+        font-weight: 450;
+        margin-bottom: 1.5rem;
+    }
+    .about-box p{
+        font-size: 12px;
+        letter-spacing: 0px;
+        text-align: justify;
+        line-height: 21px;
+        margin-bottom: 1.5rem;
+    }
+    .cssbuttons-io-button {
+      font-size: 12px;
+      font-weight: 420;
+      letter-spacing: 0.03em;
+      display: flex;
+      height: 3.3em;
+      width: 11rem;
+    }
+    #services{
+        padding-top: 20px;
+    }
+    #services h1{
+        font-size: 19px;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+    .solid-2{
+        width: 35%;
+        margin:auto;
+        margin-bottom: 1rem;
+    }
+    .services-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 25px;
+        padding: 25px 13px 15px 13px;
+        margin-bottom: 2rem;
+        flex-grow: 1;
+    }
+    .services-container .card{
+        padding: 5px;
+        width: 100%;
+        margin: auto;
+    }
+    .services-container .card h2{
+        font-size: 17px;
+        padding-top: 5px;
+        letter-spacing: 1px;
+        font-weight: 450;
+        padding-bottom: 2px;
+        margin-bottom: 17px;
+    }
+    .services-container .card > img{
+        margin-bottom: 10px;
+        width: 35%;
+        margin: auto;
+        height: 140px;
+    }
+    .services-container .card p{
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        line-height: 21px;
+        margin-bottom: 1.5rem;
+        padding-top: 22px;
+    }
+    .card-btn{
+        width: 8rem;
+        padding: 10px 10px;
+        margin-bottom: 1rem;
+    }
+    .card-btn a{
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+    .accordion {
+        padding: 12px;
+        width: 100%;
+        font-size: 12px;
+        letter-spacing: 0px;
+        font-weight: 420;
+      }
+    .panel {
+        padding: 9px;
+    }
+    .panel p{
+        font-size: 12px;
+        letter-spacing: 0px;
+        font-weight: 400;
+        line-height: 19px;
+    }
+    .skills{
+        width: 100%;
+        padding-top: 26px;
+        padding-bottom: 10px;
+    }
+    .skills h3{
+        font-size: 19px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    .solid-3{
+        width: 35%;
+        margin: auto;
+        margin-bottom: 1.5rem;
+    }
+    .content-items ol{
+        font-size: 12px;
+        letter-spacing: .1px;
+        font-weight: 400;
+        padding: 10px 10px;
+    }
+    #dj h1{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        margin-bottom: 10px;
+    }
+    .dj-blog{
+        width: 100%;
+        padding: 5px 5px 20px 5px;
+        flex-grow: 1;
+    }
+    .video-box{
+        width: 95%;
+        padding: 5px 5px 5px 5px;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+    .video-box video{
+        width: 100%;
+        object-fit: fill;
+        max-height: 480px;
+        border-radius: 5px;
+    }
+    .blog-card{
+        width: 100%;
+        padding: 5px 0px 5px 0px;
+        column-gap: .1px;
+        margin-bottom: 15px;
+    }
+    .blog-card img{
+        min-width: 13.5%;
+        height: 90px;
+        aspect-ratio: 1/ 1;
+        min-height: 100px;
+    }
+    #projects{
+        padding-top: 12px;
+    }
+    #projects h1{
+        font-size: 17px;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+    .project-list{
+        width: 100%;
+        padding: 12px 2px 20px 3px;
+    }
+    .project-list h2{
+        font-size: 12px;
+        letter-spacing: .1px;
+        font-weight: 400px;
+        padding-bottom: 3px;
+    }
+    .project-container{
+        display: grid;
+        grid-template-columns: repeat(7, 280px);
+        overflow-x: scroll;
+        grid-gap: 4px;
+        padding: 10px 5px 20px 5px;
+        margin-bottom: 1.5rem;
+        flex-grow: 1;
+    }
+    .website{
+        padding: 5px 3px 10px 3px;
+    }
+    .website img{
+        width: 100%;
+        height: 195px;
+        margin-bottom: 5px;
+    }
+    .website > .description h3{
+        font-size: 12px;
+        letter-spacing: .1px;
+        font-weight: 420;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+    .website > .description p{
+        font-weight: 12px;
+        letter-spacing: 0px;
+        font-weight: 400;
+        line-height: 18px;
+        margin-bottom: 22px;
+    }
+    .description a{
+        font-size: 11px;
+        letter-spacing: 0px;
+        padding: 10px 13px;
+    }
+    .all-projects button {
+      padding: 11px 30px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+    #contact h1{
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        padding-bottom: 5px;
+    }
+    .solid-5{
+        width: 10rem;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .contact-box{
+        width: 100%;
+        flex-grow: 1;
+        margin: auto;
+        display: block;
+        padding: 10px 15px 15px 15px;
+    }
+    form{
+        width: 100%;
+        margin: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 10px 13px 15px 13px;
+    }
+    form label, form input::placeholder, textarea::placeholder{
+        font-size: 12px;
+        letter-spacing: .1px;
+    }
+    form .input-group > input, textarea{
+        width: 100%;
+        padding: 10px 10px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }    
+    form p{
+        font-size: 11px;
+        letter-spacing: .1px;
+    }
+    /*///////////////////////////////////*/
+    /*//////////////////////////////////*/
+    #footer{
+        width: 100%;
+        padding-top: 22px;
+        padding-bottom: 20px;
+    }
+    #footer h1{
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 520;
+        padding-bottom: 5px;
+    }
+    .solid-6{
+        width: 12rem;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .footer-list{
+        width: 100%;
+        display: block;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 15px 13px 10px 13px;
+    }
+    .footer-card h2{
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-weight: 420px;
+        margin-top: 10px;
+        margin-bottom: 1.6rem;
+        padding: 5px;
+    }
+    .footer-card ul li{
+        font-size: 12px;
+        letter-spacing: .1px;
+        font-weight: 400;
+        padding-bottom: 10px;
+    }
+    .footer-card li > a{
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+    .footer-card ul ion-icon{
+        width: 10px;
+        height: 10px;
+    }
+    .footer-card .platforms li a{
+        padding: 0 12px;
+    }
+    .footer-card .platforms li a ion-icon{
+        width: 20px;
+        height: 20px;
+        margin-bottom: 5px;
+        padding: 7px 7px;
+    }
+    .rights h1{
+        font-size: 11px;
+        letter-spacing: 0px;
+        font-weight: 400;
+    }
+    .rights a ion-icon{
+        width: 23px;
+        height: 25px;
+        padding: 5px 5px;
+        position: fixed;
+        bottom: 45px;
+        right: 0px;
+        line-height: 35px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .checkbtn ion-icon{
+        font-size: 40px;
+        width: 35px;
+        height: 35px;
+        padding: 8px 8px;
+    }
+    header .logo-img{
+        width: 30px;
+        height: 30px;
+    }
+    header ul li{
+        line-height: 11px;
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    header .navigation{
+        padding: 0px;
+    }
+    header .nav-list ul li a{
+        font-weight: 420;
+        font-size: 13px;
+        letter-spacing: .1px;
+    }
+    .dropdown-wrapper{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin:0 3rem;
+        justify-content: center;
+        margin-top: 1px;
+        z-index: 10;
+    }
+    .dropdown{
+        border-radius: 0.3rem;
+        background: var(--gray);
+        display: none;
+        padding: 0.1rem;
+        width: 100%;
+        max-width: 60rem;
+        z-index: 10;
+    }
+    .list-items-with-description{
+        list-style-type: none;
+        display: grid;
+        width: 100%;
+        flex-grow: 1;
+        align-items: flex-start;
+        text-align: left;
+        grid-template-columns: repeat(2, 120px);
+        z-index: 10;
+    }
+    .list-items-with-description li{
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+        padding: 0.1rem;
+        gap: 3px;
+        width: 100%;
+    }
+    .item-title h3{
+        font-weight: 400;
+        letter-spacing: 0;
+        font-size: 10px;
+        margin-bottom: 2px;
+        color:black;
+    }
+    .item-title p{
+        font-size: 0.4rem;
+        white-space: nowrap;
+        color: gray;
+        font-weight: 400;
+    }
+    .text-box{
+        padding: 5px;
+        width: 100%;
+        margin: auto;
+    }
+    .text-box h1{
+        font-size: 13px;
+        letter-spacing: 1.2px;
+        padding-bottom: 5px;
+    }
+    .text-box h2{
+        font-size: 20px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        padding-bottom: 2px;
+    }
+    .text-box bold{
+        font-weight: 520;
+        font-size: 20px;
+    }
+    .text-box h3{
+        font-size: 20px;
+        letter-spacing: 1px;
+        margin-bottom: 1.1rem;
+    }
+    .text-box .input{
+        font-weight: 520;
+        font-size: 20px;
+    }
+    .text-box p{
+        max-width: 500px;
+        margin: auto;
+        font-size: 12px;
+        text-align: justify;
+        line-height: 21px;
+        margin-bottom: 1.7rem;
+    }
+    .socials-apps{
+        min-width: 15%;
+        margin: auto;
+    }
+    .socials-apps a{
+        margin: 0 10px;
+        width: 35px;
+        height: 35px;
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+    .banner-view{
+        width: 75%;
+        /*/code <down*/
+        margin: auto;
+    }
+    .banner-view img{
+        width: 70%;
+        margin: auto;
+        padding-top: 10px;
+    }
+    #about h1{
+        font-size: 15px;
+        padding-bottom: 3px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+    .solid-1{
+        width: 35%;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .about-container{
+        display: block;
+        grid-template-columns: 1, 1fr;
+        padding: 10px 3px 15px 3px;
+        grid-gap: 10px;
+    }
+    .about-img{
+        width: 80%;
+        margin: auto;
+    }
+    .about-img img{
+        width: 70%;
+        height: 280px;
+        padding-bottom: 25px;
+        margin: auto;
+    }
+    .about-box{
+        padding: 15px 8px 10px 8px;
+        padding-top: 2.1rem;
+        width: 100%;
+        margin: auto;
+    }
+    .about-box h2{
+        font-size: 12px;
+        font-weight: 450;
+        margin-bottom: 1.5rem;
+    }
+    .about-box p{
+        font-size: 11px;
+        text-align: justify;
+        line-height: 21px;
+        margin-bottom: 1.5rem;
+    }
+    .cssbuttons-io-button {
+      font-size: 12px;
+      font-weight: 420;
+      letter-spacing: 0.03em;
+      display: flex;
+      height: 3.3em;
+      width: 11rem;
+    }
+    .services-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 25px;
+        padding: 20px 10px 10px 10px;
+        margin-bottom: 2rem;
+        flex-grow: 1;
+    }
+    .services-container .card{
+        padding: 8px;
+    }
+    .services-container .card h2{
+        font-size: 16px;
+        padding-top: 5px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        padding-bottom: 2px;
+        margin-bottom: 17px;
+    }
+    .services-container .card > img{
+        margin-bottom: 10px;
+        width: 45%;
+        margin: auto;
+        height: 150px;
+    }
+    .services-container .card p{
+        font-size: 11px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        line-height: 19px;
+        text-align: justify;
+        margin-bottom: 1.5rem;
+        padding-top: 22px;
+    }
+}

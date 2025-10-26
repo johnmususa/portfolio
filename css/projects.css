@@ -1,0 +1,852 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: all .3s  ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+}
+:root{
+    --primary-color: green;
+    --text-color: #fff;
+    --bg-color-main: #000;
+    --solid-line: rgba(128, 128, 128, 0.507);
+}
+body{
+	font-size: 62.5%;
+}
+.header{
+    width: 100%;
+    padding: 17px;
+    text-align: center;
+    background: var(--primary-color);
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+.header h3{
+    color: var(--text-color);
+    font-size: 27px;
+    letter-spacing: 2px;
+    font-weight: 520;
+}
+.project-list{
+    width: 100%;
+    padding: 20px 5px 15px 5px;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    background: var(--bg-color-main);
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    flex-grow: 1;
+    margin-bottom: 10px;
+    padding: 10px 25px 10px 25px;
+}
+.container .col{
+    width: 100%;
+    padding: 10px 8px 25px 8px;
+    border: 1px solid green;
+    background-color: rgb(8, 8, 8);
+    border-radius: 3px;
+}
+.container .col:hover{
+    cursor: pointer;
+    scale: 1.1rem;
+    box-shadow: 0 5px 10px darkgreen;
+}
+.col img{
+    width: 100%;
+    margin: auto;
+    height: 200px;
+}
+.project-info{
+    align-items: flex-start;
+    padding-top: 12px;
+    text-align: center;
+    align-items: center;
+}
+.project-info h2{
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-weight: 450;
+    border-bottom: .1px solid var(--solid-line);
+    color: var(--text-color);
+}
+.project-info p{
+    color: var(--text-color);
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    line-height: 19px;
+    margin-bottom: 1.4rem;
+}
+.project-info a{
+    width: 100%;
+    padding: 10px 35px;
+    background: var(--primary-color);
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 450;
+    cursor: pointer;
+    font-size: 13px;
+    border-radius: 5px;
+}
+.project-info a:hover{
+    background-color:darkgreen;
+    transition: .2s ease;
+}
+.project-list h4{
+    color: var(--text-color);
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    background-color: green;
+    font-weight: 520;
+    text-align: center;
+    padding: 12px;
+    display: none;
+}
+.all-projects{
+    text-align: center;
+    margin-bottom: 1.5rem;
+    margin-top: 2.5rem;
+} 
+.all-projects button {
+  position: relative;
+  padding: 13px 25px;
+  border-radius: 7px;
+  border: 1px solid rgb(10, 109, 10);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 420;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+.projects-btn a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+.all-projects button:hover {
+  background: rgb(10, 109, 10);
+  box-shadow: 0 0 30px 5px rgba(10, 109, 10);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.all-projects button:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+.all-projects button::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.all-projects button:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+/*//////////////////////////////////////*/
+/*//////////////////////////////////////*/
+.rights{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--bg-color-main);
+    border-top: 1px solid var(--solid-line);
+}
+.rights h1{
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: white;
+    text-align: center;
+    font-weight: 420;
+}
+.rights a ion-icon{
+    text-decoration: none;
+    width: 27px;
+    height: 30px;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 30px;
+    right: 5px;
+    line-height: 50px;
+    background-color: green;
+}
+.rights a ion-icon:hover{
+    background-color: darkgreen;
+    transform: translateY(1.1);
+    scale: 1.1rem;
+    cursor: pointer;
+}
+
+/*///////// Responsive view-point ///////////*/
+/*//////////////////////////////////////////*/
+@media screen and (max-width: 1440px) and (min-width: 645px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 12px;
+        flex-grow: 1;
+        margin-bottom: 10px;
+        padding: 10px 15px 10px 15px;
+    }
+}
+@media screen and (max-width: 1176px) and (min-width: 645px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 12px;
+        flex-grow: 1;
+        margin-bottom: 10px;
+        padding: 10px 10px 10px 10px;
+    }
+    .container .col{
+        width: 100%;
+        padding: 10px 6px 25px 6px;
+        border: 1px solid green;
+        background-color: rgb(8, 8, 8);
+        border-radius: 3px;
+    }
+}
+@media screen and (max-width: 1024px) and (min-width: 645px) {
+    .header{
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        background: var(--primary-color);
+        flex-grow: 1;
+        flex-wrap: wrap;
+    }
+    .header h3{
+        color: var(--text-color);
+        font-size: 25px;
+        letter-spacing: 1.5px;
+        font-weight: 520;
+    }
+    .project-list{
+        width: 100%;
+        padding: 20px 5px 10px 5px;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        background: var(--bg-color-main);
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 12px;
+        flex-grow: 1;
+        margin-bottom: 10px;
+        padding: 10px 5px 10px 5px;
+    }
+    .container .col{
+        width: 100%;
+        padding: 10px 6px 20px 6px;
+        border: 1px solid green;
+        background-color: rgb(8, 8, 8);
+        border-radius: 3px;
+    }
+    .col img{
+        width: 100%;
+        margin: auto;
+        height: 190px;
+    }
+    .project-info{
+        align-items: flex-start;
+        padding-top: 12px;
+        text-align: center;
+        align-items: center;
+    }
+    .project-info h2{
+        text-align: center;
+        font-size: 18px;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        font-weight: 450;
+        border-bottom: .1px solid var(--solid-line);
+        color: var(--text-color);
+    }
+    .project-info p{
+        color: var(--text-color);
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        line-height: 20px;
+        margin-bottom: 1.4rem;
+    }
+    .project-info a{
+        width: 100%;
+        padding: 10px 30px;
+        background: var(--primary-color);
+        color: white;
+        text-decoration: none;
+        letter-spacing: 1px;
+        font-weight: 450;
+        cursor: pointer;
+        font-size: 13px;
+        border-radius: 5px;
+    }
+    .all-projects{
+        text-align: center;
+        margin-bottom: 1.5rem;
+        margin-top: 2rem;
+    } 
+    .all-projects button {
+      position: relative;
+      padding: 13px 30px;
+      border-radius: 7px;
+      border: 1px solid rgb(10, 109, 10);
+      text-transform: uppercase;
+      background: transparent;
+      overflow: hidden;
+      box-shadow: 0 0 0 0 transparent;
+      -webkit-transition: all 0.2s ease-in;
+      -moz-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+      cursor: pointer;
+    }
+    .projects-btn a{
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: 13px;
+        font-weight: 420;
+        letter-spacing: 2px;
+    }
+}
+@media screen and (max-width: 970px) and (min-width: 645px) {
+    .header{
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        background: var(--primary-color);
+        flex-grow: 1;
+        flex-wrap: wrap;
+    }
+    .header h3{
+        color: var(--text-color);
+        font-size: 25px;
+        letter-spacing: 1.5px;
+        font-weight: 520;
+    }
+    .project-list{
+        width: 100%;
+        padding: 20px 5px 10px 5px;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        background: var(--bg-color-main);
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        flex-grow: 1;
+        margin-bottom: 10px;
+        padding: 10px 5px 12px 5px;
+    }
+    .container .col{
+        width: 90%;
+        margin: auto;
+        padding: 12px 8px 25px 8px;
+        border: 1px solid green;
+        background-color: rgb(8, 8, 8);
+        border-radius: 3px;
+    }
+    .col img{
+        width: 100%;
+        margin: auto;
+        height: 270px;
+    }
+    .project-info{
+        align-items: flex-start;
+        padding-top: 12px;
+        text-align: center;
+        align-items: center;
+    }
+    .project-info h2{
+        text-align: center;
+        font-size: 22px;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        font-weight: 520;
+        border-bottom: .1px solid var(--solid-line);
+        color: var(--text-color);
+    }
+    .project-info p{
+        color: var(--text-color);
+        font-size: 14px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        line-height: 21px;
+        margin-bottom: 1.7rem;
+    }
+    .project-info a{
+        width: 100%;
+        padding: 10px 40px;
+        background: var(--primary-color);
+        color: white;
+        text-decoration: none;
+        letter-spacing: 1px;
+        font-weight: 450;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 5px;
+    }
+    .all-projects{
+        text-align: center;
+        margin-bottom: 1.5rem;
+        margin-top: 2rem;
+    } 
+    .all-projects button {
+      position: relative;
+      padding: 13px 30px;
+      border-radius: 7px;
+      border: 1px solid rgb(10, 109, 10);
+      text-transform: uppercase;
+      background: transparent;
+      overflow: hidden;
+      box-shadow: 0 0 0 0 transparent;
+      -webkit-transition: all 0.2s ease-in;
+      -moz-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+      cursor: pointer;
+    }
+    .projects-btn a{
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: 13px;
+        font-weight: 420;
+        letter-spacing: 2px;
+    }
+}
+@media screen and (max-width: 644px) {
+    .header{
+        width: 100%;
+        padding: 14px;
+        text-align: center;
+        background: var(--primary-color);
+        flex-grow: 1;
+        flex-wrap: wrap;
+    }
+    .header h3{
+        color: var(--text-color);
+        font-size: 23px;
+        letter-spacing: 1.5px;
+        font-weight: 520;
+    }
+    .project-list{
+        width: 100%;
+        padding: 20px 5px 10px 5px;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        background: var(--bg-color-main);
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        flex-grow: 1;
+        margin-bottom: 10px;
+        padding: 10px 5px 12px 5px;
+    }
+    .container .col{
+        width: 95%;
+        margin: auto;
+        padding: 12px 7px 25px 7px;
+        border: 1px solid green;
+        background-color: rgb(8, 8, 8);
+        border-radius: 3px;
+    }
+    .col img{
+        width: 100%;
+        margin: auto;
+        height: 240px;
+    }
+    .project-info{
+        align-items: flex-start;
+        padding-top: 14px;
+        text-align: center;
+        align-items: center;
+    }
+    .project-info h2{
+        text-align: center;
+        font-size: 20px;
+        letter-spacing: 1.2px;
+        margin-bottom: 12px;
+        font-weight: 450;
+        border-bottom: .1px solid var(--solid-line);
+        color: var(--text-color);
+    }
+    .project-info p{
+        color: var(--text-color);
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        line-height: 22px;
+        margin-bottom: 1.7rem;
+    }
+    .project-info a{
+        width: 100%;
+        padding: 10px 35px;
+        background: var(--primary-color);
+        color: white;
+        text-decoration: none;
+        letter-spacing: 1px;
+        font-weight: 450;
+        cursor: pointer;
+        font-size: 13px;
+        border-radius: 5px;
+    }
+    .all-projects{
+        text-align: center;
+        margin-bottom: 1.5rem;
+        margin-top: 2rem;
+    } 
+    .all-projects button {
+      position: relative;
+      padding: 12px 35px;
+      border-radius: 7px;
+      border: 1px solid rgb(10, 109, 10);
+      text-transform: uppercase;
+      background: transparent;
+      overflow: hidden;
+      box-shadow: 0 0 0 0 transparent;
+      -webkit-transition: all 0.2s ease-in;
+      -moz-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+      cursor: pointer;
+    }
+    .projects-btn a{
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: 12px;
+        font-weight: 420;
+        letter-spacing: 1.5px;
+    }
+    /*//////////////////////////////////////*/
+    /*//////////////////////////////////////*/
+    .rights{
+        width: 100%;
+        text-align: center;
+        padding: 18px;
+        background-color: var(--bg-color-main);
+        border-top: 1px solid var(--solid-line);
+    }
+    .rights h1{
+        font-size: 12px;
+        letter-spacing: 1px;
+        color: white;
+        text-align: center;
+        font-weight: 420;
+    }
+    .rights a ion-icon{
+        text-decoration: none;
+        width: 25px;
+        height: 27px;
+        color: white;
+        padding: 5px 5px;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 30px;
+        right: 5px;
+        line-height: 50px;
+        background-color: green;
+    }
+}
+@media screen and (max-width: 425px) {
+    .header{
+        width: 100%;
+        padding: 13px;
+        text-align: center;
+        background: var(--primary-color);
+        flex-grow: 1;
+        flex-wrap: wrap;
+    }
+    .header h3{
+        color: var(--text-color);
+        font-size: 20px;
+        letter-spacing: 1px;
+        font-weight: 520;
+    }
+    .project-list{
+        width: 100%;
+        padding: 20px 7px 10px 7px;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        background: var(--bg-color-main);
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 25px;
+        flex-grow: 1;
+        margin-bottom: 10px;
+        padding: 10px 5px 12px 5px;
+    }
+    .container .col{
+        width: 100%;
+        margin: auto;
+        padding: 12px 5px 25px 5px;
+        border: 1px solid green;
+        background-color: rgb(8, 8, 8);
+        border-radius: 3px;
+    }
+    .col img{
+        width: 100%;
+        margin: auto;
+        height: 240px;
+    }
+    .project-info{
+        align-items: flex-start;
+        padding-top: 10px;
+        text-align: center;
+        align-items: center;
+    }
+    .project-info h2{
+        text-align: center;
+        font-size: 18px;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+        font-weight: 450;
+        border-bottom: .1px solid var(--solid-line);
+        color: var(--text-color);
+    }
+    .project-info p{
+        color: var(--text-color);
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        line-height: 21px;
+        margin-bottom: 1.7rem;
+    }
+    .project-info a{
+        width: 100%;
+        padding: 10px 30px;
+        background: var(--primary-color);
+        color: white;
+        text-decoration: none;
+        letter-spacing: 1px;
+        font-weight: 450;
+        cursor: pointer;
+        font-size: 13px;
+        border-radius: 5px;
+    }
+    .all-projects{
+        text-align: center;
+        margin-bottom: 1.3rem;
+        margin-top: 1.5rem;
+    } 
+    .all-projects button {
+      position: relative;
+      padding: 12px 35px;
+      border-radius: 7px;
+      border: 1px solid rgb(10, 109, 10);
+      text-transform: uppercase;
+      background: transparent;
+      overflow: hidden;
+      box-shadow: 0 0 0 0 transparent;
+      -webkit-transition: all 0.2s ease-in;
+      -moz-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+      cursor: pointer;
+    }
+    .projects-btn a{
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: 12px;
+        font-weight: 420;
+        letter-spacing: 1.5px;
+    }
+    /*//////////////////////////////////////*/
+    /*//////////////////////////////////////*/
+    .rights{
+        width: 100%;
+        text-align: center;
+        padding: 16px;
+        background-color: var(--bg-color-main);
+        border-top: 1px solid var(--solid-line);
+    }
+    .rights h1{
+        font-size: 12px;
+        letter-spacing: .1px;
+        color: white;
+        text-align: center;
+        font-weight: 420;
+    }
+    .rights a ion-icon{
+        text-decoration: none;
+        width: 25px;
+        height: 27px;
+        color: white;
+        padding: 5px 5px;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 30px;
+        right: 5px;
+        line-height: 50px;
+        background-color: green;
+    }
+}
+@media screen and (max-width: 320px) {
+    .header{
+        width: 100%;
+        padding: 12px;
+    }
+    .header h3{
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 450;
+    }
+    .project-list{
+        width: 100%;
+        padding: 20px 5px 10px 5px;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 23px;
+        flex-grow: 1;
+        margin-bottom: 10px;
+        padding: 10px 5px 12px 5px;
+    }
+    .container .col{
+        width: 100%;
+        margin: auto;
+        padding: 11px 5px 25px 5px;
+    }
+    .col img{
+        width: 100%;
+        margin: auto;
+        height: 220px;
+    }
+    .project-info{
+        align-items: flex-start;
+        padding-top: 10px;
+    }
+    .project-info h2{
+        font-size: 17px;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+        font-weight: 450;
+    }
+    .project-info p{
+        font-size: 12px;
+        letter-spacing: .1px;
+        font-weight: 400;
+        line-height: 18px;
+        margin-bottom: 1.7rem;
+    }
+    .project-info a{
+        width: 100%;
+        padding: 8px 25px;
+        letter-spacing: 1px;
+        font-weight: 420;
+        font-size: 12px;
+    }
+    .all-projects{
+        margin-bottom: 1.3rem;
+        margin-top: 1.5rem;
+    } 
+    .all-projects button {
+      position: relative;
+      padding: 12px 35px;
+      border-radius: 7px;
+      border: 1px solid rgb(10, 109, 10);
+      text-transform: uppercase;
+      background: transparent;
+      overflow: hidden;
+      box-shadow: 0 0 0 0 transparent;
+      -webkit-transition: all 0.2s ease-in;
+      -moz-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+      cursor: pointer;
+    }
+    .projects-btn a{
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: 12px;
+        font-weight: 420;
+        letter-spacing: 1.5px;
+    }
+    /*//////////////////////////////////////*/
+    /*//////////////////////////////////////*/
+    .rights{
+        width: 100%;
+        text-align: center;
+        padding: 14px;
+        background-color: var(--bg-color-main);
+        border-top: 1px solid var(--solid-line);
+    }
+    .rights h1{
+        font-size: 12px;
+        letter-spacing: .1px;
+        color: white;
+        text-align: center;
+        font-weight: 420;
+    }
+    .rights a ion-icon{
+        text-decoration: none;
+        width: 25px;
+        height: 27px;
+        color: white;
+        padding: 5px 5px;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 30px;
+        right: 5px;
+        line-height: 50px;
+        background-color: green;
+    }
+}
